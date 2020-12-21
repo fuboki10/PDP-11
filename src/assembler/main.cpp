@@ -25,7 +25,8 @@ map<string, int> labels, variables;
 map<string, bitset<16>> noOperand;
 map<string, bitset<10>> oneOperand;
 map<string, bitset<4>> twoOperand;
-int addressOffset = 0, lineIndex = 0;
+map<string, bitset<8>> branchOperand;
+int lineIndex = 0;
 // ===================================
 
 // ==============Functions============
@@ -53,7 +54,9 @@ bool isVariable(string &s);
 bool isNoOperand(string &inst);
 bool isOneOperand(string &inst);
 bool isTwoOperand(string &inst);
+bool isBranchOperand(string &inst);
 
+void removeVariablesFrom(string &line);
 void removeVariableFrom(string &inst);
 
 // ====================================
@@ -86,6 +89,15 @@ void init()
   twoOperand["AND"] = bitset<4>("0100"); // 04
   twoOperand["OR"] = bitset<4>("1100");  // 14
   twoOperand["XOR"] = bitset<4>("0101"); // 05
+
+  // branchOperand init
+  branchOperand["BR"] = bitset<8>("00000001");  // 001
+  branchOperand["BEQ"] = bitset<8>("00000011"); // 003
+  branchOperand["BNE"] = bitset<8>("00000010"); // 002
+  branchOperand["BLO"] = bitset<8>("10000111"); // 207
+  branchOperand["BLS"] = bitset<8>("10000011"); // 203
+  branchOperand["BHI"] = bitset<8>("10000010"); // 202
+  branchOperand["BHS"] = bitset<8>("10000110"); // 206
 }
 
 int main(int argc, char **argv)
@@ -129,7 +141,6 @@ int main(int argc, char **argv)
   for (lineIndex = 0; lineIndex < code.size(); lineIndex++)
   {
     string line = code[lineIndex];
-    cout << line << endl;
 
     if (isNumber(line))
     {
@@ -142,10 +153,7 @@ int main(int argc, char **argv)
 
     // 1111111111111111 means skip
     if (inst == bitset<16>("1111111111111111"))
-    {
-      addressOffset--;
       continue;
-    }
 
     outputFile << inst << endl;
   }
@@ -218,12 +226,10 @@ bitset<16> compile(string line)
     bitset<4> opCode = twoOperand[instName];
 
     string src = fetchInst(line);
-    removeVariableFrom(src);
     bitset<3> modeSrc = getMode(src);
     bitset<3> regSrc = getRegister(src);
 
     string dst = fetchInst(line);
-    removeVariableFrom(dst);
     bitset<3> modeDst = getMode(dst);
     bitset<3> regDst = getRegister(dst);
 
@@ -267,6 +273,11 @@ bool isTwoOperand(string &inst)
   return twoOperand.count(inst) > 0;
 }
 
+bool isBranchOperand(string &inst)
+{
+  return branchOperand.count(inst) > 0;
+}
+
 string toUpperCase(string &s)
 {
   for (char &c : s)
@@ -286,19 +297,38 @@ void removeSpacesAndTabs(string &s)
 
 void getLabelsAndVariables()
 {
-  int offset = 0;
-  for (string &inst : code)
+  for (lineIndex = 0; lineIndex < code.size(); lineIndex++)
   {
-    if (isLabel(inst))
+    string line = code[lineIndex];
+    // X value
+    if (isdigit(line[0]))
+      continue;
+
+    if (isLabel(line))
     {
-      storeLabel(offset);
+      storeLabel(lineIndex);
+      // remove label from line
+      removeLabel(line);
+      // remove tabs and spaces
+      removeSpacesAndTabs(line);
     }
-    else if (isVariable(inst))
+    else if (isVariable(line))
     {
-      storeVariable(offset);
+      storeVariable(lineIndex);
+      continue;
     }
 
-    offset++;
+    // if it is a comment skip or empty remove
+    if (line.empty() || line[0] == ';')
+    {
+      code.erase(code.begin() + lineIndex);
+      lineIndex--;
+      continue;
+    }
+
+    // remove variables from line
+    removeVariablesFrom(line);
+    code[lineIndex] = line;
   }
 }
 
@@ -351,6 +381,7 @@ string getLabelName(string &s)
 
 string fetchInst(string &line)
 {
+  removeSpacesAndTabs(line);
   if (line[0] == ',')
     line.erase(0, 1);
   removeSpacesAndTabs(line);
@@ -446,7 +477,6 @@ void removeVariableFrom(string &inst)
     else
       inst = "(R7)+";
     code.insert(code.begin() + lineIndex + 1, value);
-    addressOffset++;
   }
 
   // indexed
@@ -456,10 +486,47 @@ void removeVariableFrom(string &inst)
     int st = i;
     while (i < inst.size() && isdigit(inst[i]))
       value += inst[i++];
-    cout << inst << endl;
     inst.replace(st, value.size(), "X");
-    cout << inst << endl;
     code.insert(code.begin() + lineIndex + 1, value);
-    addressOffset++;
   }
+
+  // indirect
+  if (isalpha(inst[i]) && inst[i] != 'R')
+  {
+    string value = "";
+    int st = i;
+    while (i < inst.size() && inst[i] != ' ' && inst[i] != '\t' && inst[i] != ',')
+      value += inst[i++];
+    inst.replace(st, value.size(), "X(R7)");
+    code.insert(code.begin() + lineIndex + 1, value);
+  }
+}
+
+void removeVariablesFrom(string &line)
+{
+  string tmp = line;
+
+  string op = fetchInst(line);
+  if (isBranchOperand(op) || isNoOperand(op))
+  {
+    line = tmp;
+    return;
+  }
+
+  tmp = op + " ";
+
+  bool hasTwoOperands = isTwoOperand(op);
+
+  op = fetchInst(line);
+  removeVariableFrom(op);
+  tmp += op;
+
+  if (hasTwoOperands)
+  {
+    op = fetchInst(line);
+    removeVariableFrom(op);
+    tmp += ", " + op;
+  }
+
+  line = tmp;
 }
