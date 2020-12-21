@@ -24,6 +24,8 @@ vector<string> code;
 map<string, int> labels, variables;
 map<string, bitset<16>> noOperand;
 map<string, bitset<10>> oneOperand;
+map<string, bitset<4>> twoOperand;
+int addressOffset = 0, lineIndex = 0;
 // ===================================
 
 // ==============Functions============
@@ -45,10 +47,14 @@ void storeVariable(int offset);
 
 string getLabelName(string &s);
 
+bool isNumber(string &s);
 bool isLabel(string &s);
 bool isVariable(string &s);
 bool isNoOperand(string &inst);
 bool isOneOperand(string &inst);
+bool isTwoOperand(string &inst);
+
+void removeVariableFrom(string &inst);
 
 // ====================================
 
@@ -69,6 +75,17 @@ void init()
   oneOperand["ASR"] = bitset<10>("0000110010"); // 0062
   oneOperand["LSL"] = bitset<10>("0000110011"); // 0063
   oneOperand["ROL"] = bitset<10>("0000110001"); // 0061
+
+  // twoOperand init
+  twoOperand["MOV"] = bitset<4>("0001"); // 01
+  twoOperand["ADD"] = bitset<4>("0110"); // 06
+  twoOperand["CMP"] = bitset<4>("0010"); // 02
+  twoOperand["SUB"] = bitset<4>("1110"); // 16
+  twoOperand["ADC"] = bitset<4>("0011"); // 03
+  twoOperand["SBC"] = bitset<4>("1011"); // 13
+  twoOperand["AND"] = bitset<4>("0100"); // 04
+  twoOperand["OR"] = bitset<4>("1100");  // 14
+  twoOperand["XOR"] = bitset<4>("0101"); // 05
 }
 
 int main(int argc, char **argv)
@@ -109,13 +126,26 @@ int main(int argc, char **argv)
   ofstream outputFile("out.txt");
 
   bitset<16> inst;
-  for (string &line : code)
+  for (lineIndex = 0; lineIndex < code.size(); lineIndex++)
   {
+    string line = code[lineIndex];
+    cout << line << endl;
+
+    if (isNumber(line))
+    {
+      inst = stoi(line);
+      outputFile << inst << endl;
+      continue;
+    }
+
     inst = compile(line);
 
     // 1111111111111111 means skip
     if (inst == bitset<16>("1111111111111111"))
+    {
+      addressOffset--;
       continue;
+    }
 
     outputFile << inst << endl;
   }
@@ -172,10 +202,34 @@ bitset<16> compile(string line)
   if (isOneOperand(instName))
   {
     bitset<10> opCode = oneOperand[instName];
+
     string dst = fetchInst(line);
+    removeVariableFrom(dst);
     bitset<3> mode = getMode(dst);
     bitset<3> reg = getRegister(dst);
+
     bitset<16> code = concat(opCode, concat(mode, reg));
+    return code;
+  }
+
+  // two operand
+  if (isTwoOperand(instName))
+  {
+    bitset<4> opCode = twoOperand[instName];
+
+    string src = fetchInst(line);
+    removeVariableFrom(src);
+    bitset<3> modeSrc = getMode(src);
+    bitset<3> regSrc = getRegister(src);
+
+    string dst = fetchInst(line);
+    removeVariableFrom(dst);
+    bitset<3> modeDst = getMode(dst);
+    bitset<3> regDst = getRegister(dst);
+
+    bitset<6> srcCode = concat(modeSrc, regSrc);
+    bitset<6> dstCode = concat(modeDst, regDst);
+    bitset<16> code = concat(opCode, concat(srcCode, dstCode));
     return code;
   }
 
@@ -206,6 +260,11 @@ bool isNoOperand(string &inst)
 bool isOneOperand(string &inst)
 {
   return oneOperand.count(inst) > 0;
+}
+
+bool isTwoOperand(string &inst)
+{
+  return twoOperand.count(inst) > 0;
 }
 
 string toUpperCase(string &s)
@@ -274,7 +333,8 @@ void storeVariable(int offset)
     exit(1);
   }
 
-  variables[vairable] = stoi(value);
+  variables[vairable] = offset;
+  code[offset] = value;
 }
 
 string getLabelName(string &s)
@@ -291,10 +351,12 @@ string getLabelName(string &s)
 
 string fetchInst(string &line)
 {
+  if (line[0] == ',')
+    line.erase(0, 1);
   removeSpacesAndTabs(line);
   string inst = "";
   int i = 0;
-  while (i < line.size() && line[i] != ' ' && line[i] != '\t')
+  while (i < line.size() && line[i] != ' ' && line[i] != '\t' && line[i] != ',')
     inst += line[i++];
   line.erase(0, i);
   return inst;
@@ -309,7 +371,7 @@ bitset<3> getMode(string &inst)
     mode = 4;
   else if (inst[0] == '(')
     mode = 2;
-  else if (isdigit(inst[0]))
+  else if (inst[0] == 'X')
     mode = 6;
   else if (inst[0] == '@')
   {
@@ -319,7 +381,7 @@ bitset<3> getMode(string &inst)
       mode = 5;
     else if (inst[1] == '(')
       mode = 3;
-    else if (isdigit(inst[1]))
+    else if (inst[1] == 'X')
       mode = 7;
     else
     {
@@ -364,4 +426,40 @@ void removeLabel(string &line)
   while (i < line.size() && line[i] != ':')
     i++;
   line.erase(0, i + 1);
+}
+
+void removeVariableFrom(string &inst)
+{
+  int i = 0;
+  if (inst[0] == '@')
+    i++;
+
+  // Immediate
+  if (inst[i] == '#')
+  {
+    string value = "";
+    i++;
+    while (i < inst.size() && isdigit(inst[i]))
+      value += inst[i++];
+    if (inst[0] == '@')
+      inst = "@(R7)+";
+    else
+      inst = "(R7)+";
+    code.insert(code.begin() + lineIndex + 1, value);
+    addressOffset++;
+  }
+
+  // indexed
+  if (isdigit(inst[i]))
+  {
+    string value = "";
+    int st = i;
+    while (i < inst.size() && isdigit(inst[i]))
+      value += inst[i++];
+    cout << inst << endl;
+    inst.replace(st, value.size(), "X");
+    cout << inst << endl;
+    code.insert(code.begin() + lineIndex + 1, value);
+    addressOffset++;
+  }
 }
