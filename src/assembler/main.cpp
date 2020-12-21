@@ -3,6 +3,7 @@
 #include <fstream>
 #include <vector>
 #include <map>
+#include <bitset>
 using namespace std;
 
 #define IO                               \
@@ -16,6 +17,11 @@ map<string, int> labels, variables;
 // ===================================
 
 // ==============Functions============
+bitset<16> compile(string line);
+
+string fetchInst(string &line);
+void removeLabel(string &line);
+
 void removeSpacesAndTabs(string &s);
 string toUpperCase(string &s);
 
@@ -61,12 +67,85 @@ int main(int argc, char **argv)
     code.push_back(toUpperCase(line)); // push to the code vector
   }
 
+  inputFile.close();
+
   getLabelsAndVariables();
+
+  ofstream outputFile("out.txt");
+
+  bitset<16> inst;
+  for (string &line : code)
+  {
+    inst = compile(line);
+
+    // 1111111111111111 means skip
+    if (inst == bitset<16>("1111111111111111"))
+      continue;
+
+    outputFile << inst << endl;
+  }
+
+  outputFile.close();
 }
+
+// ============ Compiler ==============
+bitset<16> compile(string line)
+{
+  bitset<16> skip("1111111111111111");
+
+  // if empty line exit with error
+  if (line.empty())
+  {
+    cerr << "Empty line Error.\n";
+    exit(1);
+  }
+
+  // line has label
+  bool hasLabel = isLabel(line);
+
+  // if line has label remove the label
+  if (hasLabel)
+  {
+    // remove label from line
+    removeLabel(line);
+    // remove tabs and spaces
+    removeSpacesAndTabs(line);
+    // if it is a comment skip or empty
+    if (line.empty() || line[0] == ';')
+      return skip;
+  }
+
+  // line has label
+  bool hasVariable = isVariable(line);
+
+  // if line has variable skip
+  if (hasVariable)
+  {
+    return skip;
+  }
+
+  // get inst from the line
+  string instName = fetchInst(line);
+
+  cout << instName << endl;
+
+  return skip;
+}
+// ====================================
 
 bool isNumber(string &s)
 {
   return !s.empty() && all_of(s.begin(), s.end(), ::isdigit);
+}
+
+bool isLabel(string &s)
+{
+  return s.find(':') != string::npos;
+}
+
+bool isVariable(string &s)
+{
+  return s.find("DEFINE", 0) != string::npos;
 }
 
 string toUpperCase(string &s)
@@ -138,16 +217,6 @@ void storeVariable(int offset)
   variables[vairable] = stoi(value);
 }
 
-bool isLabel(string &s)
-{
-  return s.find(':') != string::npos;
-}
-
-bool isVariable(string &s)
-{
-  return s.find("DEFINE", 0) != string::npos;
-}
-
 string getLabelName(string &s)
 {
   string label = "";
@@ -158,4 +227,23 @@ string getLabelName(string &s)
     label += c;
   }
   return label;
+}
+
+string fetchInst(string &line)
+{
+  string inst = "";
+  int i = 0;
+  while (i < line.size() && line[i] != ' ' && line[i] != '\t')
+    inst += line[i++];
+  cout << inst << endl;
+  line.erase(0, i);
+  return inst;
+}
+
+void removeLabel(string &line)
+{
+  int i = 0;
+  while (i < line.size() && line[i] != ':')
+    i++;
+  line.erase(0, i + 1);
 }
