@@ -14,6 +14,7 @@ using namespace std;
 // ==================================
 vector<string> code;
 map<string, int> labels, variables;
+map<string, bitset<16>> noOperand;
 // ===================================
 
 // ==============Functions============
@@ -34,12 +35,22 @@ string getLabelName(string &s);
 
 bool isLabel(string &s);
 bool isVariable(string &s);
+bool isNoOperand(string &inst);
 
 // ====================================
+
+void init()
+{
+  // noOperand init
+  noOperand["HLT"] = bitset<16>("0000000000000000");   // 000000
+  noOperand["NOP"] = bitset<16>("0000000010100000");   // 000240
+  noOperand["RESET"] = bitset<16>("0000000000000101"); // 000005
+}
 
 int main(int argc, char **argv)
 {
   IO; // fast IO
+  init();
 
   if (argc != 2)
   {
@@ -127,7 +138,11 @@ bitset<16> compile(string line)
   // get inst from the line
   string instName = fetchInst(line);
 
-  cout << instName << endl;
+  // no operand
+  if (isNoOperand(instName))
+  {
+    return noOperand[instName];
+  }
 
   return skip;
 }
@@ -146,6 +161,11 @@ bool isLabel(string &s)
 bool isVariable(string &s)
 {
   return s.find("DEFINE", 0) != string::npos;
+}
+
+bool isNoOperand(string &inst)
+{
+  return noOperand.count(inst) > 0;
 }
 
 string toUpperCase(string &s)
