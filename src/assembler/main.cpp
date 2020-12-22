@@ -149,20 +149,23 @@ int main(int argc, char **argv)
     while (line[line.size() - 1] == ' ')
       line.pop_back();
 
+    // print the variable offset
     if (variables.count(line) > 0)
     {
-      inst = variables[line];
+      inst = variables[line] - lineIndex;
       outputFile << inst << endl;
       continue;
     }
 
+    // print the label offset
     if (labels.count(line) > 0)
     {
-      inst = labels[line];
+      inst = labels[line] - lineIndex;
       outputFile << inst << endl;
       continue;
     }
 
+    // print number
     if (isNumber(line))
     {
       inst = stoi(line);
