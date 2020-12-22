@@ -67,6 +67,8 @@ void init()
   noOperand["HLT"] = bitset<16>("0000000000000000");   // 000000
   noOperand["NOP"] = bitset<16>("0000000010100000");   // 000240
   noOperand["RESET"] = bitset<16>("0000000000000101"); // 000005
+  noOperand["RTS"] = bitset<16>("0000000010000111");   // 000207
+  noOperand["IRET"] = bitset<16>("0000000000000010");  // 000002
 
   // oneOperand init
   oneOperand["INC"] = bitset<10>("0000101010"); // 0052
@@ -78,6 +80,7 @@ void init()
   oneOperand["ASR"] = bitset<10>("0000110010"); // 0062
   oneOperand["LSL"] = bitset<10>("0000110011"); // 0063
   oneOperand["ROL"] = bitset<10>("0000110001"); // 0061
+  oneOperand["JSR"] = bitset<10>("0000100111"); // 0047
 
   // twoOperand init
   twoOperand["MOV"] = bitset<4>("0001"); // 01
@@ -142,6 +145,24 @@ int main(int argc, char **argv)
   {
     string line = code[lineIndex];
 
+    // remove spaces
+    while (line[line.size() - 1] == ' ')
+      line.pop_back();
+
+    if (variables.count(line) > 0)
+    {
+      inst = variables[line];
+      outputFile << inst << endl;
+      continue;
+    }
+
+    if (labels.count(line) > 0)
+    {
+      inst = labels[line];
+      outputFile << inst << endl;
+      continue;
+    }
+
     if (isNumber(line))
     {
       inst = stoi(line);
@@ -149,6 +170,7 @@ int main(int argc, char **argv)
       continue;
     }
 
+    // compile
     inst = compile(line);
 
     // 1111111111111111 means skip
@@ -236,6 +258,17 @@ bitset<16> compile(string line)
     bitset<6> srcCode = concat(modeSrc, regSrc);
     bitset<6> dstCode = concat(modeDst, regDst);
     bitset<16> code = concat(opCode, concat(srcCode, dstCode));
+    return code;
+  }
+
+  // branch operand
+  if (isBranchOperand(instName))
+  {
+    bitset<8> opCode = branchOperand[instName];
+    string label = fetchInst(line);
+    int addr = labels[label];
+    bitset<8> offset = addr - lineIndex;
+    bitset<16> code = concat(opCode, offset);
     return code;
   }
 
