@@ -152,7 +152,7 @@ int main(int argc, char **argv)
     // print the variable offset
     if (variables.count(line) > 0)
     {
-      inst = variables[line] - lineIndex;
+      inst = variables[line] - lineIndex - 1;
       outputFile << inst << endl;
       continue;
     }
@@ -160,7 +160,7 @@ int main(int argc, char **argv)
     // print the label offset
     if (labels.count(line) > 0)
     {
-      inst = labels[line] - lineIndex;
+      inst = labels[line] - lineIndex - 1;
       outputFile << inst << endl;
       continue;
     }
@@ -171,6 +171,27 @@ int main(int argc, char **argv)
       inst = stoi(line);
       outputFile << inst << endl;
       continue;
+    }
+
+    if (line[0] == '#')
+    {
+      line.erase(0, 1);
+      // number
+      // print number
+      if (isNumber(line))
+      {
+        inst = stoi(line);
+        outputFile << inst << endl;
+        continue;
+      }
+      // variable
+      // print the variable address
+      if (variables.count(line) > 0)
+      {
+        inst = variables[line];
+        outputFile << inst << endl;
+        continue;
+      }
     }
 
     // compile
@@ -270,7 +291,7 @@ bitset<16> compile(string line)
     bitset<8> opCode = branchOperand[instName];
     string label = fetchInst(line);
     int addr = labels[label];
-    bitset<8> offset = addr - lineIndex;
+    bitset<8> offset = addr - lineIndex - 1;
     bitset<16> code = concat(opCode, offset);
     return code;
   }
@@ -512,9 +533,9 @@ void removeVariableFrom(string &inst)
   // Immediate
   if (inst[i] == '#')
   {
-    string value = "";
+    string value = "#";
     i++;
-    while (i < inst.size() && isdigit(inst[i]))
+    while (i < inst.size() && inst[i] != ' ' && inst[i] != '\t')
       value += inst[i++];
     if (inst[0] == '@')
       inst = "@(R7)+";
@@ -524,7 +545,7 @@ void removeVariableFrom(string &inst)
   }
 
   // indexed
-  if (isdigit(inst[i]))
+  else if (isdigit(inst[i]))
   {
     string value = "";
     int st = i;
@@ -535,7 +556,7 @@ void removeVariableFrom(string &inst)
   }
 
   // indirect
-  if (isalpha(inst[i]) && inst[i] != 'R')
+  else if (isalpha(inst[i]) && inst[i] != 'R')
   {
     string value = "";
     int st = i;
