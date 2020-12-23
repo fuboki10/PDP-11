@@ -65,41 +65,41 @@ void init()
 {
   // noOperand init
   noOperand["HLT"] = bitset<16>("0000000000000000");   // 000000
-  noOperand["NOP"] = bitset<16>("0000000010100000");   // 000240
-  noOperand["RESET"] = bitset<16>("0000000000000101"); // 000005
-  noOperand["RTS"] = bitset<16>("0000000010000111");   // 000207
+  noOperand["NOP"] = bitset<16>("0000000000000001");   // 000001
+  noOperand["RESET"] = bitset<16>("0000000000000100"); // 000004
+  noOperand["RTS"] = bitset<16>("0000000000000111");   // 000007
   noOperand["IRET"] = bitset<16>("0000000000000010");  // 000002
 
   // oneOperand init
-  oneOperand["INC"] = bitset<10>("0000101010"); // 0052
-  oneOperand["DEC"] = bitset<10>("0000101011"); // 0053
-  oneOperand["CLR"] = bitset<10>("0000101000"); // 0050
-  oneOperand["INV"] = bitset<10>("0000101001"); // 0051
-  oneOperand["LSR"] = bitset<10>("0000101111"); // 0057
-  oneOperand["ROR"] = bitset<10>("0000110000"); // 0060
-  oneOperand["ASR"] = bitset<10>("0000110010"); // 0062
-  oneOperand["LSL"] = bitset<10>("0000110011"); // 0063
-  oneOperand["ROL"] = bitset<10>("0000110001"); // 0061
-  oneOperand["JSR"] = bitset<10>("0000100111"); // 0047
+  oneOperand["INC"] = bitset<10>("0000101000"); // 0050
+  oneOperand["DEC"] = bitset<10>("0000101001"); // 0051
+  oneOperand["CLR"] = bitset<10>("0000101010"); // 0052
+  oneOperand["INV"] = bitset<10>("0000101100"); // 0054
+  oneOperand["LSR"] = bitset<10>("0000110000"); // 0060
+  oneOperand["ROR"] = bitset<10>("0000110010"); // 0062
+  oneOperand["ASR"] = bitset<10>("0000110001"); // 0061
+  oneOperand["LSL"] = bitset<10>("0000110100"); // 0064
+  oneOperand["ROL"] = bitset<10>("0000110110"); // 0066
+  oneOperand["JSR"] = bitset<10>("0000000111"); // 0007
 
   // twoOperand init
-  twoOperand["MOV"] = bitset<4>("0001"); // 01
-  twoOperand["ADD"] = bitset<4>("0110"); // 06
-  twoOperand["CMP"] = bitset<4>("0010"); // 02
-  twoOperand["SUB"] = bitset<4>("1110"); // 16
+  twoOperand["MOV"] = bitset<4>("1001"); // 11
+  twoOperand["CMP"] = bitset<4>("1010"); // 12
+  twoOperand["ADD"] = bitset<4>("0001"); // 01
+  twoOperand["SUB"] = bitset<4>("0010"); // 02
   twoOperand["ADC"] = bitset<4>("0011"); // 03
-  twoOperand["SBC"] = bitset<4>("1011"); // 13
-  twoOperand["AND"] = bitset<4>("0100"); // 04
-  twoOperand["OR"] = bitset<4>("1100");  // 14
-  twoOperand["XOR"] = bitset<4>("0101"); // 05
+  twoOperand["SBC"] = bitset<4>("0100"); // 04
+  twoOperand["AND"] = bitset<4>("0101"); // 05
+  twoOperand["OR"] = bitset<4>("0110");  // 06
+  twoOperand["XOR"] = bitset<4>("0111"); // 07
 
   // branchOperand init
   branchOperand["BR"] = bitset<8>("00000001");  // 001
-  branchOperand["BEQ"] = bitset<8>("00000011"); // 003
-  branchOperand["BNE"] = bitset<8>("00000010"); // 002
-  branchOperand["BLO"] = bitset<8>("10000111"); // 207
-  branchOperand["BLS"] = bitset<8>("10000011"); // 203
-  branchOperand["BHI"] = bitset<8>("10000010"); // 202
+  branchOperand["BEQ"] = bitset<8>("00000010"); // 002
+  branchOperand["BNE"] = bitset<8>("00000100"); // 004
+  branchOperand["BLO"] = bitset<8>("10000001"); // 201
+  branchOperand["BLS"] = bitset<8>("10000010"); // 202
+  branchOperand["BHI"] = bitset<8>("10000100"); // 204
   branchOperand["BHS"] = bitset<8>("10000110"); // 206
 }
 
