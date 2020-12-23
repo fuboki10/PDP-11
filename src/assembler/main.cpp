@@ -364,6 +364,14 @@ void getLabelsAndVariables()
 
     // remove variables from line
     removeVariablesFrom(line);
+    // if it is a comment skip or empty remove
+    if (line.empty() || line[0] == ';')
+    {
+      code.erase(code.begin() + lineIndex);
+      lineIndex--;
+      continue;
+    }
+
     code[lineIndex] = line;
   }
 }
@@ -546,6 +554,10 @@ void removeVariablesFrom(string &line)
   if (isBranchOperand(op) || isNoOperand(op))
   {
     line = tmp;
+    // if NOP remove
+    if (op == "NOP")
+      line = "";
+
     return;
   }
 
