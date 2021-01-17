@@ -11,6 +11,8 @@ using namespace std;
   std::cin.tie(NULL);                    \
   std::cout.tie(NULL);
 
+#define RAM_SIZE 2000
+
 template <size_t N1, size_t N2>
 bitset<N1 + N2> concat(const bitset<N1> &b1, const bitset<N2> &b2)
 {
@@ -138,7 +140,12 @@ int main(int argc, char **argv)
 
   getLabelsAndVariables();
 
-  ofstream outputFile("out.txt");
+  ofstream outputFile("memory.mem");
+
+  outputFile << "// instance=/integration/ramMemory/ram\n";
+  outputFile << "// format=mti addressradix=d dataradix=s version=2.0 wordsperline=1\n";
+
+  int lineNumber = 0;
 
   bitset<16> inst;
   for (lineIndex = 0; lineIndex < code.size(); lineIndex++)
@@ -153,7 +160,8 @@ int main(int argc, char **argv)
     if (variables.count(line) > 0)
     {
       inst = variables[line] - lineIndex - 1;
-      outputFile << inst << endl;
+      outputFile << lineNumber << ": " << inst << endl;
+      lineNumber++;
       continue;
     }
 
@@ -161,7 +169,8 @@ int main(int argc, char **argv)
     if (labels.count(line) > 0)
     {
       inst = labels[line] - lineIndex - 1;
-      outputFile << inst << endl;
+      outputFile << lineNumber << ": " << inst << endl;
+      lineNumber++;
       continue;
     }
 
@@ -169,7 +178,8 @@ int main(int argc, char **argv)
     if (isNumber(line))
     {
       inst = stoi(line);
-      outputFile << inst << endl;
+      outputFile << lineNumber << ": " << inst << endl;
+      lineNumber++;
       continue;
     }
 
@@ -181,7 +191,8 @@ int main(int argc, char **argv)
       if (isNumber(line))
       {
         inst = stoi(line);
-        outputFile << inst << endl;
+        outputFile << lineNumber << ": " << inst << endl;
+        lineNumber++;
         continue;
       }
       // variable
@@ -189,7 +200,8 @@ int main(int argc, char **argv)
       if (variables.count(line) > 0)
       {
         inst = variables[line];
-        outputFile << inst << endl;
+        outputFile << lineNumber << ": " << inst << endl;
+        lineNumber++;
         continue;
       }
     }
@@ -201,8 +213,14 @@ int main(int argc, char **argv)
     if (inst == bitset<16>("1111111111111111"))
       continue;
 
-    outputFile << inst << endl;
+    outputFile << lineNumber << ": " << inst << endl;
+    lineNumber++;
   }
+
+  // print empty memory in ram
+  inst = bitset<16>("0000000000000000");
+  for (lineNumber; lineNumber < RAM_SIZE; lineNumber++)
+    outputFile << lineNumber << ": " << inst << endl;
 
   outputFile.close();
 }
