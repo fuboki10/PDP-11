@@ -21,9 +21,9 @@ Vg:TeS2zfAoH9z<QXz2PbG3
 !s100 EgMeQN`?^dUn8W?5Q6CNf3
 Z6 OV;C;10.4d;61
 32
-Z7 !s110 1610956885
+Z7 !s110 1610989727
 !i10b 1
-Z8 !s108 1610956885.000000
+Z8 !s108 1610989727.000000
 Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/ALU.vhd|
 Z10 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/ALU.vhd|
 !i113 1
@@ -48,7 +48,7 @@ R10
 R11
 R12
 Ecircuit
-Z13 w1610935769
+Z13 w1610990365
 Z14 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R1
 R2
@@ -57,13 +57,13 @@ Z15 8C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/circuit.vhd
 Z16 FC:/Users/STEINER/Desktop/PDP-11/vhdl/bus/circuit.vhd
 l0
 L5
-V>o=b`^>FihKU<@a3l[I7>2
-!s100 ][;;VeUWOk3<<TZ1_XbPN2
+V[0=S>@4>kEkm;KYF5z_mh2
+!s100 Pf_0fo=PDkh9gmnmlM69h1
 R6
 32
-Z17 !s110 1610956886
+Z17 !s110 1610990423
 !i10b 1
-Z18 !s108 1610956886.000000
+Z18 !s108 1610990423.000000
 Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/circuit.vhd|
 Z20 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/circuit.vhd|
 !i113 1
@@ -73,11 +73,11 @@ Acircuit_arch
 R14
 R1
 R2
-DEx4 work 7 circuit 0 22 >o=b`^>FihKU<@a3l[I7>2
-l61
-L9
-VFke6cg30;QGe1E[nnRLV`3
-!s100 4j^ga6j<>4kigFe=@RG4X0
+Z21 DEx4 work 7 circuit 0 22 [0=S>@4>kEkm;KYF5z_mh2
+l65
+L10
+V4T?5jLVj6[ZlIk<gESJVm0
+!s100 7WND6G2_WEZzaTMgRQFT23
 R6
 32
 R17
@@ -89,24 +89,24 @@ R20
 R11
 R12
 Einstruction_decoder
-Z21 w1610956876
+Z22 w1610979946
 R14
 R1
 R2
 R3
-Z22 8C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/instruction_decoder.vhd
-Z23 FC:/Users/STEINER/Desktop/PDP-11/vhdl/bus/instruction_decoder.vhd
+Z23 8C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/instruction_decoder.vhd
+Z24 FC:/Users/STEINER/Desktop/PDP-11/vhdl/bus/instruction_decoder.vhd
 l0
 L5
-VL3DBB29dMJ`lHZhj2T:DX0
-!s100 VL5WF=KZ7X`Q^eBi4R0ZA1
+VS<2ICDKPE9RW2F69f`kzG2
+!s100 _i`RgXZaMni:e1R0labWW0
 R6
 32
-Z24 !s110 1610956887
+Z25 !s110 1610989729
 !i10b 1
-R18
-Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/instruction_decoder.vhd|
-Z26 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/instruction_decoder.vhd|
+Z26 !s108 1610989729.000000
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/instruction_decoder.vhd|
+Z28 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/instruction_decoder.vhd|
 !i113 1
 R11
 R12
@@ -114,39 +114,39 @@ Ainstr_decoder_arch
 R14
 R1
 R2
-Z27 DEx4 work 19 instruction_decoder 0 22 L3DBB29dMJ`lHZhj2T:DX0
-l19
-L15
-Z28 Vh^bTnN=ET5ejYAQWf0B<W3
-Z29 !s100 `o_zfnOFBd2W`G?I`f9`>3
+DEx4 work 19 instruction_decoder 0 22 S<2ICDKPE9RW2F69f`kzG2
+l36
+L24
+V_X^9ekPahFc?z4PQ]keff1
+!s100 B?P>16KP4S5<Mo<zP5gA[0
 R6
 32
-R24
-!i10b 1
-R18
 R25
+!i10b 1
 R26
+R27
+R28
 !i113 1
 R11
 R12
 Emy_adder
-Z30 w1603806524
+Z29 w1603806524
 R1
 R2
 R3
-Z31 8C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/my_adder.vhd
-Z32 FC:/Users/STEINER/Desktop/PDP-11/vhdl/alu/my_adder.vhd
+Z30 8C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/my_adder.vhd
+Z31 FC:/Users/STEINER/Desktop/PDP-11/vhdl/alu/my_adder.vhd
 l0
 L4
 V>KIFVIfaa3nb>;X<leAFS2
 !s100 A5lJZfMh@V_I]hj`4ZSML1
 R6
 32
-R7
+Z32 !s110 1610989726
 !i10b 1
-R8
-Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/my_adder.vhd|
-Z34 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/my_adder.vhd|
+Z33 !s108 1610989726.000000
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/my_adder.vhd|
+Z35 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/my_adder.vhd|
 !i113 1
 R11
 R12
@@ -160,32 +160,32 @@ V=;CFci:66?]^9i=MQ2z981
 !s100 GNi^[i0bJH4Ed:4A3E4hd2
 R6
 32
-R7
+R32
 !i10b 1
-R8
 R33
 R34
+R35
 !i113 1
 R11
 R12
 Emy_ndff
-Z35 w1605452259
+Z36 w1610990210
 R1
 R2
 R3
-Z36 8C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/register.vhd
-Z37 FC:/Users/STEINER/Desktop/PDP-11/vhdl/bus/register.vhd
+Z37 8C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/register.vhd
+Z38 FC:/Users/STEINER/Desktop/PDP-11/vhdl/bus/register.vhd
 l0
 L4
 V4md0i_CIILl9`D;7A9NUg1
 !s100 2=YQZiR3gmdCe;1=ZKz1K3
 R6
 32
-R17
+Z39 !s110 1610990234
 !i10b 1
-R18
-Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/register.vhd|
-Z39 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/register.vhd|
+Z40 !s108 1610990234.000000
+Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/register.vhd|
+Z42 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/register.vhd|
 !i113 1
 R11
 R12
@@ -199,33 +199,33 @@ VX2:^jUVAQ1UTMni[i^_283
 !s100 Db`K9AnGB4ZQj:NQMOQ]I0
 R6
 32
-R17
-!i10b 1
-R18
-R38
 R39
+!i10b 1
+R40
+R41
+R42
 !i113 1
 R11
 R12
 Endecoder
-Z40 w1605380611
+Z43 w1605380611
 R14
 R1
 R2
 R3
-Z41 8C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/decoder.vhd
-Z42 FC:/Users/STEINER/Desktop/PDP-11/vhdl/bus/decoder.vhd
+Z44 8C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/decoder.vhd
+Z45 FC:/Users/STEINER/Desktop/PDP-11/vhdl/bus/decoder.vhd
 l0
 L5
 VVl88z_[?_RGc`cCJ0S7]h2
 !s100 <a>KP`WodOG:ZU4cIDnCS1
 R6
 32
-R17
+Z46 !s110 1610989728
 !i10b 1
-R18
-Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/decoder.vhd|
-Z44 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/decoder.vhd|
+Z47 !s108 1610989728.000000
+Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/decoder.vhd|
+Z49 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/decoder.vhd|
 !i113 1
 R11
 R12
@@ -240,33 +240,33 @@ VU^Wlo4DZPkXzho7C>SXAf3
 !s100 jR[4fm?e<3lzA7@8z>EMO0
 R6
 32
-R17
+R46
 !i10b 1
-R18
-R43
-R44
+R47
+R48
+R49
 !i113 1
 R11
 R12
 Eparta
-Z45 w1610736145
+Z50 w1610736145
 R14
 R1
 R2
 R3
-Z46 8C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partA.vhd
-Z47 FC:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partA.vhd
+Z51 8C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partA.vhd
+Z52 FC:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partA.vhd
 l0
 L5
 VgNfie2;o]A4HEgzBBbS;V0
 !s100 gGKgn_ZcTERC?A>MkD8>C0
 R6
 32
-R7
+R32
 !i10b 1
-R8
-Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partA.vhd|
-Z49 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partA.vhd|
+R33
+Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partA.vhd|
+Z54 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partA.vhd|
 !i113 1
 R11
 R12
@@ -281,21 +281,21 @@ V9B:7Y0N1>czmodHbS5loi0
 !s100 S;_?PF?5VI3W4CEoc3EbL2
 R6
 32
-R7
+R32
 !i10b 1
-R8
-R48
-R49
+R33
+R53
+R54
 !i113 1
 R11
 R12
 Epartb
-Z50 w1610732249
+Z55 w1610732249
 R1
 R2
 R3
-Z51 8C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partB.vhd
-Z52 FC:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partB.vhd
+Z56 8C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partB.vhd
+Z57 FC:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partB.vhd
 l0
 L4
 V:Id54jcL7jS_2>_FQTiWm0
@@ -305,8 +305,8 @@ R6
 R7
 !i10b 1
 R8
-Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partB.vhd|
-Z54 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partB.vhd|
+Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partB.vhd|
+Z59 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partB.vhd|
 !i113 1
 R11
 R12
@@ -323,18 +323,18 @@ R6
 R7
 !i10b 1
 R8
-R53
-R54
+R58
+R59
 !i113 1
 R11
 R12
 Epartc
-Z55 w1610731946
+Z60 w1610731946
 R1
 R2
 R3
-Z56 8C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partC.vhd
-Z57 FC:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partC.vhd
+Z61 8C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partC.vhd
+Z62 FC:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partC.vhd
 l0
 L4
 VFkcnm3nbPN5:gF@3<CH281
@@ -344,8 +344,8 @@ R6
 R7
 !i10b 1
 R8
-Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partC.vhd|
-Z59 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partC.vhd|
+Z63 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partC.vhd|
+Z64 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partC.vhd|
 !i113 1
 R11
 R12
@@ -362,18 +362,18 @@ R6
 R7
 !i10b 1
 R8
-R58
-R59
+R63
+R64
 !i113 1
 R11
 R12
 Epartd
-Z60 w1610736143
+Z65 w1610736143
 R1
 R2
 R3
-Z61 8C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partD.vhd
-Z62 FC:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partD.vhd
+Z66 8C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partD.vhd
+Z67 FC:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partD.vhd
 l0
 L4
 V3m9NOVdoCBWRM4C_<<9zn0
@@ -383,8 +383,8 @@ R6
 R7
 !i10b 1
 R8
-Z63 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partD.vhd|
-Z64 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partD.vhd|
+Z68 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partD.vhd|
+Z69 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partD.vhd|
 !i113 1
 R11
 R12
@@ -401,30 +401,30 @@ R6
 R7
 !i10b 1
 R8
-R63
-R64
+R68
+R69
 !i113 1
 R11
 R12
 Eram
-Z65 w1605472783
+Z70 w1605472783
 R14
 R1
 R2
 R3
-Z66 8C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/ram.vhd
-Z67 FC:/Users/STEINER/Desktop/PDP-11/vhdl/bus/ram.vhd
+Z71 8C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/ram.vhd
+Z72 FC:/Users/STEINER/Desktop/PDP-11/vhdl/bus/ram.vhd
 l0
 L5
 V=b:<2_FQG2VEmNX95G?B]3
 !s100 Y8PX`EGHVLaEdlZPFQ8A[1
 R6
 32
-R17
+R46
 !i10b 1
-R18
-Z68 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/ram.vhd|
-Z69 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/ram.vhd|
+R47
+Z73 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/ram.vhd|
+Z74 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/ram.vhd|
 !i113 1
 R11
 R12
@@ -439,32 +439,32 @@ VVN]cKCDQ[J7jNllPLTimO3
 !s100 ?<l?W^m@2[ghS^SiPf4J[0
 R6
 32
-R17
+R46
 !i10b 1
-R18
-R68
-R69
+R47
+R73
+R74
 !i113 1
 R11
 R12
 Etristate_buffer
-Z70 w1605452622
+Z75 w1605452622
 R1
 R2
 R3
-Z71 8C:/Users/STEINER/Desktop/PDP-11/vhdl/work/tristate.vhd
-Z72 FC:/Users/STEINER/Desktop/PDP-11/vhdl/work/tristate.vhd
+Z76 8C:/Users/STEINER/Desktop/PDP-11/vhdl/work/tristate.vhd
+Z77 FC:/Users/STEINER/Desktop/PDP-11/vhdl/work/tristate.vhd
 l0
 L4
 VA3oR=fG^4d:9zbg[Q<W>L1
 !s100 QNdO79H@_^f1a0FVQkl^61
 R6
 32
-R17
+R25
 !i10b 1
-R18
-Z73 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/work/tristate.vhd|
-Z74 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/work/tristate.vhd|
+R26
+Z78 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/work/tristate.vhd|
+Z79 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/work/tristate.vhd|
 !i113 1
 R11
 R12
@@ -478,11 +478,11 @@ V6=A?_=IHBE7J`i5kgZi8i1
 !s100 b`=k>CVCnTVVIPQVEl@h[3
 R6
 32
-R17
+R25
 !i10b 1
-R18
-R73
-R74
+R26
+R78
+R79
 !i113 1
 R11
 R12

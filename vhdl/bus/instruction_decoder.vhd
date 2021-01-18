@@ -9,13 +9,30 @@ ENTITY instruction_decoder IS
   PORT (
     clk, enable : IN STD_LOGIC;
     ir, flag : IN STD_LOGIC_VECTOR(N - 1 DOWNTO 0);
+    f9 : OUT STD_LOGIC_VECTOR((2**1) - 1 DOWNTO 0);
+    f8 : OUT STD_LOGIC_VECTOR((2**3) - 1 DOWNTO 0);
+    f7 : OUT STD_LOGIC_VECTOR((2**1) - 1 DOWNTO 0);
+    f6 : OUT STD_LOGIC_VECTOR((2**2) - 1 DOWNTO 0);
+    f5 : OUT STD_LOGIC_VECTOR((2**5) - 1 DOWNTO 0);
+    f4 : OUT STD_LOGIC_VECTOR((2**1) - 1 DOWNTO 0);
+    f3 : OUT STD_LOGIC_VECTOR((2**2) - 1 DOWNTO 0);
+    f2 : OUT STD_LOGIC_VECTOR((2**3) - 1 DOWNTO 0);
+    f1 : OUT STD_LOGIC_VECTOR((2**3) - 1 DOWNTO 0);
     control_signals : OUT STD_LOGIC_VECTOR(M - 1 DOWNTO 0));
 END ENTITY instruction_decoder;
 
 ARCHITECTURE instr_decoder_arch OF instruction_decoder IS
+  COMPONENT ndecoder IS
+    GENERIC (n : INTEGER := 2);
+    PORT (
+      enable : IN STD_LOGIC;
+      input : IN STD_LOGIC_VECTOR(n - 1 DOWNTO 0);
+      output : OUT STD_LOGIC_VECTOR((2 ** n) - 1 DOWNTO 0));
+  END COMPONENT;
   SIGNAL micro_ar : STD_LOGIC_VECTOR(7 DOWNTO 0);
   SIGNAL control_word : STD_LOGIC_VECTOR(M - 1 DOWNTO 0);
   SIGNAL check : STD_LOGIC;
+  -- signal f0
 BEGIN
   PROCESS (clk) IS
   BEGIN
@@ -83,7 +100,8 @@ BEGIN
       END CASE;
 
       -- BIT ORING
-      CASE control_word(27 DOWNTO 25) IS --F8
+      -- If no FLAG_in it will be decreased by one
+      CASE control_word(4 DOWNTO 2) IS --F8
         WHEN "101" | "010" => --ORsin, ORdin
           micro_ar_var(0) := NOT ir(9);
         WHEN "001" => --ORdst
@@ -92,11 +110,24 @@ BEGIN
           micro_ar_var(4) := NOT ir(9);
           --TODO VERY IMPORTANT CHANGE OP CODES OF 1 OP ABOVE
           micro_ar_var(2 DOWNTO 0) := ir(8 DOWNTO 6);
+        WHEN "100" => --OR2op
+          micro_ar_var(4) := ir(15);
+          micro_ar_var(2 DOWNTO 0) := ir(14 DOWNTO 12);
         WHEN OTHERS =>
           NULL;
       END CASE;
-      micro_ar <= micro_ar_var;
+      -- If no FLAG_in it will be decreased by one
+      micro_ar <= micro_ar_var OR control_word(29 DOWNTO 22);
     END IF;
   END PROCESS;
+  f9_label : ndecoder GENERIC MAP(1) PORT MAP('1', control_word(1 DOWNTO 1), f9);
+  f8_label : ndecoder GENERIC MAP(3) PORT MAP('1', control_word(4 DOWNTO 2), f8);
+  f7_label : ndecoder GENERIC MAP(1) PORT MAP('1', control_word(5 DOWNTO 5), f7);
+  f6_label : ndecoder GENERIC MAP(2) PORT MAP('1', control_word(7 DOWNTO 6), f6);
+  f5_label : ndecoder GENERIC MAP(5) PORT MAP('1', control_word(12 DOWNTO 8), f5);
+  f4_label : ndecoder GENERIC MAP(1) PORT MAP('1', control_word(13 DOWNTO 13), f4);
+  f3_label : ndecoder GENERIC MAP(2) PORT MAP('1', control_word(15 DOWNTO 14), f3);
+  f2_label : ndecoder GENERIC MAP(3) PORT MAP('1', control_word(18 DOWNTO 16), f2);
+  f1_label : ndecoder GENERIC MAP(3) PORT MAP('1', control_word(21 DOWNTO 19), f1);
   -- dataout <= ram(to_integer(unsigned(address)));
 END instr_decoder_arch;
