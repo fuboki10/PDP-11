@@ -9,7 +9,7 @@ END circuit;
 ARCHITECTURE circuit_arch OF circuit IS
 
 signal inverted_src_enable, inverted_dest_enable : std_logic;
-signal reg0_out, reg1_out, reg2_out, reg3_out, reg4_out, reg5_out, reg6_out, reg7_out, mdr_out, mar_out, ir_out, temp_out, y_out, z_out, flag_out, ram_out, bus_line, a_in, b_in : std_logic_vector(15 downto 0);
+signal reg0_out, reg1_out, reg2_out, reg3_out, reg4_out, reg5_out, reg6_out, reg7_out, mdr_out, mar_out, ir_out, temp_out, y_out, z_out, flag_out, ram_out, bus_line : std_logic_vector(15 downto 0);
 signal dest_out, src_out : std_logic_vector(7 downto 0);
 signal en : std_logic_vector(6 downto 0);
 signal tri_en : std_logic_vector(5 downto 0);
@@ -74,7 +74,7 @@ BEGIN
        	END PROCESS;
 
 
-	alu_label: alu GENERIC MAP(16) port map(a_in, b_in, alu_flag_in, alu_s, alu_flag_out, alu_out); 
+	alu_label: alu GENERIC MAP(16) port map(y_out, bus_line, alu_flag_in, alu_s, alu_flag_out, alu_out); 
 		
 	src_label: ndecoder GENERIC MAP(3) port map(src_enable, src_sel, src_out);
 	dest_label: ndecoder GENERIC MAP(3) port map(dest_enable, dest_sel, dest_out);
@@ -114,9 +114,5 @@ BEGIN
 	tristate10_label: tristate_buffer GENERIC MAP(16) port map(tri_en(1), temp_out, bus_line);
 	tristate11_label: tristate_buffer GENERIC MAP(16) port map(tri_en(2), z_out, bus_line);
 	tristate12_label: tristate_buffer GENERIC MAP(16) port map(tri_en(3), flag_out, bus_line);
-
-	tristate13_label: tristate_buffer GENERIC MAP(16) port map(tri_en(4), bus_line, b_in);
-	tristate14_label: tristate_buffer GENERIC MAP(16) port map(tri_en(5), y_out, a_in);
-	
 
 END circuit_arch;
