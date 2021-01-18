@@ -1,3 +1,80 @@
 # Reading C:/altera/16.0/modelsim_ase/tcl/vsim/pref.tcl
 # OpenFile C:/Users/STEINER/Desktop/PDP-11/vhdl/pdp11.mpf
 # Loading project pdp11
+# Compile of circuit.vhd was successful.
+# Compile of instruction_decoder.vhd failed with 1 errors.
+# Compile of instruction_decoder.vhd failed with 8 errors.
+# Compile of instruction_decoder.vhd failed with 7 errors.
+# Compile of instruction_decoder.vhd failed with 5 errors.
+# Compile of instruction_decoder.vhd failed with 3 errors.
+# Compile of instruction_decoder.vhd failed with 2 errors.
+# Compile of instruction_decoder.vhd was successful.
+# Compile of instruction_decoder.vhd was successful with warnings.
+# Compile of instruction_decoder.vhd failed with 2 errors.
+# Compile of instruction_decoder.vhd failed with 2 errors.
+# Compile of instruction_decoder.vhd was successful.
+# Compile of instruction_decoder.vhd was successful.
+# Compile of instruction_decoder.vhd was successful.
+# Compile of instruction_decoder.vhd failed with 1 errors.
+# Compile of instruction_decoder.vhd failed with 1 errors.
+# Compile of instruction_decoder.vhd was successful.
+# Compile of instruction_decoder.vhd failed with 2 errors.
+# Compile of instruction_decoder.vhd failed with 2 errors.
+# Compile of instruction_decoder.vhd failed with 2 errors.
+# Compile of instruction_decoder.vhd failed with 2 errors.
+# Compile of instruction_decoder.vhd failed with 2 errors.
+# Compile of instruction_decoder.vhd failed with 2 errors.
+# Compile of instruction_decoder.vhd failed with 2 errors.
+# Compile of instruction_decoder.vhd failed with 2 errors.
+# Compile of instruction_decoder.vhd failed with 2 errors.
+# Compile of my_adder.vhd was successful.
+# Compile of partA.vhd was successful.
+# Compile of partB.vhd was successful.
+# Compile of partC.vhd was successful.
+# Compile of partD.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of circuit.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of ram.vhd was successful.
+# Compile of register.vhd was successful.
+# Compile of tristate.vhd was successful.
+# Compile of instruction_decoder.vhd failed with 2 errors.
+# 12 compiles, 1 failed with 2 errors.
+# Compile of instruction_decoder.vhd failed with 2 errors.
+# Compile of instruction_decoder.vhd failed with 3 errors.
+# Compile of instruction_decoder.vhd failed with 2 errors.
+# Compile of instruction_decoder.vhd was successful.
+# Compile of instruction_decoder.vhd was successful.
+# Compile of instruction_decoder.vhd was successful.
+# Compile of instruction_decoder.vhd was successful.
+
+
+# Compile of instruction_decoder.vhd was successful.
+# Compile of instruction_decoder.vhd failed with 5 errors.
+# Compile of my_adder.vhd was successful.
+# Compile of partA.vhd was successful.
+# Compile of partB.vhd was successful.
+# Compile of partC.vhd was successful.
+# Compile of partD.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of circuit.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of ram.vhd was successful.
+# Compile of register.vhd was successful.
+# Compile of tristate.vhd was successful.
+# Compile of instruction_decoder.vhd failed with 5 errors.
+# 12 compiles, 1 failed with 5 errors.
+# Compile of instruction_decoder.vhd was successful.
+# Compile of my_adder.vhd was successful.
+# Compile of partA.vhd was successful.
+# Compile of partB.vhd was successful.
+# Compile of partC.vhd was successful.
+# Compile of partD.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of circuit.vhd was successful.
+# Compile of decoder.vhd was successful.
+# Compile of ram.vhd was successful.
+# Compile of register.vhd was successful.
+# Compile of tristate.vhd was successful.
+# Compile of instruction_decoder.vhd was successful.
+# 12 compiles, 0 failed with no errors.
