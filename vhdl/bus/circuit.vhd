@@ -8,8 +8,8 @@ PORT(src_enable, dest_enable, rst, clk: in std_logic;
 END circuit;
 ARCHITECTURE circuit_arch OF circuit IS
 
-signal inverted_src_enable, inverted_dest_enable : std_logic;
-signal reg0_out, reg1_out, reg2_out, reg3_out, reg4_out, reg5_out, reg6_out, reg7_out, mdr_out, mar_out, ir_out, temp_out, y_out, z_out, flag_out, ram_out, bus_line : std_logic_vector(15 downto 0);
+signal inverted_src_enable, inverted_dest_enable, inverted_flag_enable : std_logic;
+signal reg0_out, reg1_out, reg2_out, reg3_out, reg4_out, reg5_out, reg6_out, reg7_out, mdr_out, mar_out, ir_out, temp_out, y_out, z_out, flag_out, ram_out, bus_line, temp_flag_out : std_logic_vector(15 downto 0);
 signal dest_out, src_out : std_logic_vector(7 downto 0);
 signal en : std_logic_vector(6 downto 0);
 signal tri_en : std_logic_vector(5 downto 0);
@@ -93,7 +93,12 @@ BEGIN
 	temp_label: my_nDFF GENERIC MAP(16) port map(clk, rst, en(3), bus_line, temp_out); 
 	y_label: my_nDFF GENERIC MAP(16) port map(clk, rst, en(4), bus_line, y_out); 
 	z_label: my_nDFF GENERIC MAP(16) port map(clk, rst, en(5), alu_out, z_out); 
-	flag_label: my_nDFF GENERIC MAP(16) port map(clk, rst, en(6), alu_flag_out, flag_out); 
+	flag_label: my_nDFF GENERIC MAP(16) port map(clk, rst, en(6), temp_flag_out, flag_out); 
+
+	inverted_flag_enable <= not en(6);
+
+	temp_flag_label: my_nDFF GENERIC MAP(16) port map(clk, rst, inverted_flag_enable, alu_flag_out, temp_flag_out); 
+
 
 	ram_label: ram GENERIC MAP(16,11) port map(clk, inverted_dest_enable, counter_out, bus_line, ram_out);
 
@@ -113,6 +118,5 @@ BEGIN
 	tristate9_label: tristate_buffer GENERIC MAP(16) port map(tri_en(0), mdr_out, bus_line);
 	tristate10_label: tristate_buffer GENERIC MAP(16) port map(tri_en(1), temp_out, bus_line);
 	tristate11_label: tristate_buffer GENERIC MAP(16) port map(tri_en(2), z_out, bus_line);
-	tristate12_label: tristate_buffer GENERIC MAP(16) port map(tri_en(3), flag_out, bus_line);
 
 END circuit_arch;
