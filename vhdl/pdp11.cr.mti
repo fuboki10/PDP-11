@@ -6,24 +6,24 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Compiling entity partD
 -- Compiling architecture modelD of partD
 
-} {} {}} ./alu/partC.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partC.vhd
-Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+} {} {}} ./alu/partC.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Projects/C++/PDP-11/vhdl/alu/partC.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity partC
 -- Compiling architecture modelC of partC
 
-} {} {}} ./alu/ALU.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/ALU.vhd
-Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+} {} {}} ./alu/ALU.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Projects/C++/PDP-11/vhdl/alu/ALU.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity alu
 -- Compiling architecture aluModel of alu
 
-} {} {}} ./alu/partD.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partD.vhd
-Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+} {} {}} ./alu/partD.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Projects/C++/PDP-11/vhdl/alu/partD.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -55,6 +55,15 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Compiling entity ram
 -- Compiling architecture syncrama of ram
 
+} {} {}} ./bus/ram.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Projects/C++/PDP-11/vhdl/bus/ram.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ram
+-- Compiling architecture syncrama of ram
+
 } {} {}} D:/altera_projects/project/bus/circuit.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/altera_projects/project/bus/circuit.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Loading package STANDARD
@@ -63,6 +72,31 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Loading package NUMERIC_STD
 -- Compiling entity circuit
 -- Compiling architecture circuit_arch of circuit
+
+} {} {}} ./bus/circuit.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Projects/C++/PDP-11/vhdl/bus/circuit.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity circuit
+-- Compiling architecture circuit_arch of circuit
+
+} {} {}} ./alu/my_adder.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Projects/C++/PDP-11/vhdl/alu/my_adder.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity my_adder
+-- Compiling architecture a_my_adder of my_adder
+
+} {} {}} ./bus/register.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Projects/C++/PDP-11/vhdl/bus/register.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity my_nDFF
+-- Compiling architecture reg of my_nDFF
 
 } {} {}} D:/altera_projects/project/bus/decoder.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/altera_projects/project/bus/decoder.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
@@ -73,13 +107,14 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Compiling entity ndecoder
 -- Compiling architecture decoder_arch of ndecoder
 
-} {} {}} ./alu/my_adder.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/my_adder.vhd
-Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+} {} {}} ./bus/decoder.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Projects/C++/PDP-11/vhdl/bus/decoder.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity my_adder
--- Compiling architecture a_my_adder of my_adder
+-- Loading package NUMERIC_STD
+-- Compiling entity ndecoder
+-- Compiling architecture decoder_arch of ndecoder
 
 } {} {}} D:/altera_projects/project/alu/partA.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/altera_projects/project/alu/partA.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
@@ -90,14 +125,13 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Compiling entity partA
 -- Compiling architecture modelA of partA
 
-} {} {}} ./alu/partA.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partA.vhd
+} {} {}} D:/altera_projects/project/work/tristate.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/altera_projects/project/work/tristate.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity partA
--- Compiling architecture modelA of partA
+-- Compiling entity tristate_buffer
+-- Compiling architecture tristate_arch of tristate_buffer
 
 } {} {}} D:/altera_projects/project/alu/partB.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/altera_projects/project/alu/partB.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
@@ -107,21 +141,30 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Compiling entity partB
 -- Compiling architecture modelB of partB
 
-} {} {}} D:/altera_projects/project/work/tristate.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/altera_projects/project/work/tristate.vhd
-Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+} {} {}} ./alu/partA.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Projects/C++/PDP-11/vhdl/alu/partA.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity partA
+-- Compiling architecture modelA of partA
+
+} {} {}} ./work/tristate.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Projects/C++/PDP-11/vhdl/work/tristate.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity tristate_buffer
 -- Compiling architecture tristate_arch of tristate_buffer
 
-} {} {}} ./alu/partB.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partB.vhd
+} {} {}} D:/altera_projects/project/alu/ALU.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/altera_projects/project/alu/ALU.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity partB
--- Compiling architecture modelB of partB
+-- Compiling entity alu
+-- Compiling architecture aluModel of alu
 
 } {} {}} D:/altera_projects/project/alu/partC.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/altera_projects/project/alu/partC.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
@@ -131,12 +174,12 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Compiling entity partC
 -- Compiling architecture modelC of partC
 
-} {} {}} D:/altera_projects/project/alu/ALU.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/altera_projects/project/alu/ALU.vhd
-Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+} {} {}} ./alu/partB.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/Projects/C++/PDP-11/vhdl/alu/partB.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity alu
--- Compiling architecture aluModel of alu
+-- Compiling entity partB
+-- Compiling architecture modelB of partB
 
 } {} {}}
