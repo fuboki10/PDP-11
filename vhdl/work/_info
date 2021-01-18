@@ -21,9 +21,9 @@ VaJfKXNKbR4:_8KK8=M@dz1
 !s100 EgMeQN`?^dUn8W?5Q6CNf3
 Z6 OV;C;10.5b;63
 32
-Z7 !s110 1610935012
+Z7 !s110 1610935372
 !i10b 1
-Z8 !s108 1610935012.000000
+Z8 !s108 1610935372.000000
 Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Projects/C++/PDP-11/vhdl/alu/ALU.vhd|
 Z10 !s107 D:/Projects/C++/PDP-11/vhdl/alu/ALU.vhd|
 !i113 1
@@ -48,7 +48,7 @@ R10
 R11
 R12
 Ecircuit
-Z13 w1610935007
+Z13 w1610935356
 Z14 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R1
 R2
@@ -74,10 +74,10 @@ R14
 R1
 R2
 DEx4 work 7 circuit 0 22 Wo2Y<>H`V7CRn?KGg[lU@2
-l62
+l61
 L9
-V@kVZFoUEYbI[P:dQdM;>61
-!s100 @[C7NPCYAM^eh@o8?dII=2
+V[W5iU[FX`O2Bh3?YbfED83
+!s100 4j^ga6j<>4kigFe=@RG4X0
 R6
 32
 R7
@@ -101,11 +101,11 @@ VFjlMaf=9aFlNWPMnMXH?k3
 !s100 A5lJZfMh@V_I]hj`4ZSML1
 R6
 32
-R7
+Z21 !s110 1610935371
 !i10b 1
-R8
-Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Projects/C++/PDP-11/vhdl/alu/my_adder.vhd|
-Z22 !s107 D:/Projects/C++/PDP-11/vhdl/alu/my_adder.vhd|
+Z22 !s108 1610935371.000000
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Projects/C++/PDP-11/vhdl/alu/my_adder.vhd|
+Z24 !s107 D:/Projects/C++/PDP-11/vhdl/alu/my_adder.vhd|
 !i113 1
 R11
 R12
@@ -119,30 +119,30 @@ VEOP9;;8K^;kWb:D@aED0N1
 !s100 GNi^[i0bJH4Ed:4A3E4hd2
 R6
 32
-R7
-!i10b 1
-R8
 R21
+!i10b 1
 R22
+R23
+R24
 !i113 1
 R11
 R12
 Emy_ndff
-Z23 w1610922438
+Z25 w1610922438
 R1
 R2
 R3
-Z24 8D:/Projects/C++/PDP-11/vhdl/bus/register.vhd
-Z25 FD:/Projects/C++/PDP-11/vhdl/bus/register.vhd
+Z26 8D:/Projects/C++/PDP-11/vhdl/bus/register.vhd
+Z27 FD:/Projects/C++/PDP-11/vhdl/bus/register.vhd
 l0
 L4
 V_XAk67QaAPGaM@n^mAfY12
 !s100 2=YQZiR3gmdCe;1=ZKz1K3
 R6
 32
-Z26 !s110 1610935013
+R7
 !i10b 1
-Z27 !s108 1610935013.000000
+R8
 Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Projects/C++/PDP-11/vhdl/bus/register.vhd|
 Z29 !s107 D:/Projects/C++/PDP-11/vhdl/bus/register.vhd|
 !i113 1
@@ -158,16 +158,16 @@ VD<A[_NG8G@7I5n1o7=fhz1
 !s100 Db`K9AnGB4ZQj:NQMOQ]I0
 R6
 32
-R26
+R7
 !i10b 1
-R27
+R8
 R28
 R29
 !i113 1
 R11
 R12
 Endecoder
-R23
+R25
 R14
 R1
 R2
@@ -180,9 +180,9 @@ V^91UhGWbC];d13UU1DakF1
 !s100 <a>KP`WodOG:ZU4cIDnCS1
 R6
 32
-R26
+R7
 !i10b 1
-R27
+R8
 Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Projects/C++/PDP-11/vhdl/bus/decoder.vhd|
 Z33 !s107 D:/Projects/C++/PDP-11/vhdl/bus/decoder.vhd|
 !i113 1
@@ -199,9 +199,9 @@ Vkl8PPZBlRT9m0X3f`;TH<1
 !s100 jR[4fm?e<3lzA7@8z>EMO0
 R6
 32
-R26
+R7
 !i10b 1
-R27
+R8
 R32
 R33
 !i113 1
@@ -223,7 +223,7 @@ R6
 32
 R7
 !i10b 1
-R8
+R22
 Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Projects/C++/PDP-11/vhdl/alu/partA.vhd|
 Z37 !s107 D:/Projects/C++/PDP-11/vhdl/alu/partA.vhd|
 !i113 1
@@ -242,14 +242,14 @@ R6
 32
 R7
 !i10b 1
-R8
+R22
 R36
 R37
 !i113 1
 R11
 R12
 Epartb
-R23
+R25
 R1
 R2
 R3
@@ -288,7 +288,7 @@ R41
 R11
 R12
 Epartc
-R23
+R25
 R1
 R2
 R3
@@ -327,7 +327,7 @@ R45
 R11
 R12
 Epartd
-R23
+R25
 R1
 R2
 R3
@@ -366,7 +366,7 @@ R49
 R11
 R12
 Eram
-R23
+R25
 R14
 R1
 R2
@@ -379,9 +379,9 @@ V55fRaf5>@P;=kRfYMXATT0
 !s100 Y8PX`EGHVLaEdlZPFQ8A[1
 R6
 32
-R26
+R7
 !i10b 1
-R27
+R8
 Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Projects/C++/PDP-11/vhdl/bus/ram.vhd|
 Z53 !s107 D:/Projects/C++/PDP-11/vhdl/bus/ram.vhd|
 !i113 1
@@ -398,16 +398,16 @@ V^jk:4:H5IG:fAAebPZ8ei2
 !s100 ?<l?W^m@2[ghS^SiPf4J[0
 R6
 32
-R26
+R7
 !i10b 1
-R27
+R8
 R52
 R53
 !i113 1
 R11
 R12
 Etristate_buffer
-R23
+R25
 R1
 R2
 R3
@@ -419,29 +419,29 @@ VWCX2g@`T`B:QdWO=LS=8X2
 !s100 QNdO79H@_^f1a0FVQkl^61
 R6
 32
-R26
+Z56 !s110 1610935373
 !i10b 1
-R27
-Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Projects/C++/PDP-11/vhdl/work/tristate.vhd|
-Z57 !s107 D:/Projects/C++/PDP-11/vhdl/work/tristate.vhd|
+R8
+Z57 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Projects/C++/PDP-11/vhdl/work/tristate.vhd|
+Z58 !s107 D:/Projects/C++/PDP-11/vhdl/work/tristate.vhd|
 !i113 1
 R11
 R12
 Atristate_arch
 R1
 R2
-Z58 DEx4 work 15 tristate_buffer 0 22 WCX2g@`T`B:QdWO=LS=8X2
+Z59 DEx4 work 15 tristate_buffer 0 22 WCX2g@`T`B:QdWO=LS=8X2
 l11
 L10
-Z59 VM?^CDik[c8Of7n3>b6b;n1
-Z60 !s100 b`=k>CVCnTVVIPQVEl@h[3
+Z60 VM?^CDik[c8Of7n3>b6b;n1
+Z61 !s100 b`=k>CVCnTVVIPQVEl@h[3
 R6
 32
-R26
-!i10b 1
-R27
 R56
+!i10b 1
+R8
 R57
+R58
 !i113 1
 R11
 R12

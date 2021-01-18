@@ -58,21 +58,7 @@ component alu IS
 
 END component;
 
-signal counter_out : std_logic_vector(10 downto 0);
 BEGIN
-	PROCESS (clk, rst)
-    	VARIABLE cnt : INTEGER RANGE 10 DOWNTO 0;
-    	BEGIN
-           	IF rising_edge(clk) THEN
-                	IF rst = '1' or cnt = 0 THEN
-                        	cnt := 10;
-                	ELSE
-                        	cnt := cnt - 1;
-                	END IF;
-              	END IF;
-        	counter_out <= std_logic_vector(to_unsigned(cnt,11));
-       	END PROCESS;
-
 
 	alu_label: alu GENERIC MAP(16) port map(y_out, bus_line, flag_out, alu_s, temp_flag_in, alu_out); 
 		
@@ -100,7 +86,7 @@ BEGIN
 	temp_flag_label: my_nDFF GENERIC MAP(16) port map(clk, rst, inverted_flag_enable, temp_flag_in, temp_flag_out); 
 
 
-	ram_label: ram GENERIC MAP(16,11) port map(clk, inverted_dest_enable, counter_out, bus_line, ram_out);
+	ram_label: ram GENERIC MAP(16,11) port map(clk, inverted_dest_enable, mar_out, mdr_out, ram_out);
 
 	inverted_src_enable <= not src_enable;
 	inverted_dest_enable <= not dest_enable;
