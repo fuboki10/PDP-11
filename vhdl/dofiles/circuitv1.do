@@ -27,8 +27,7 @@ sim:/circuit/z_out \
 sim:/circuit/flag_out \
 sim:/circuit/ram_out \
 sim:/circuit/bus_line \
-sim:/circuit/temp_flag_out \
-sim:/circuit/temp_flag_in \
+sim:/circuit/flag_in \
 sim:/circuit/dest_out \
 sim:/circuit/src_out \
 sim:/circuit/en \
@@ -72,7 +71,7 @@ force -freeze sim:/circuit/en(6) 1 0
 run
 
 force -freeze sim:/circuit/src_sel 010 0
-force -freeze sim:/circuit/alu_s 0000 0
+force -freeze sim:/circuit/alu_s 0010 0
 force -freeze sim:/circuit/en(6) 0 0
 
 run
