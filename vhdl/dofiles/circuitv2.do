@@ -4,9 +4,9 @@ add wave -position insertpoint  \
 sim:/circuit/*
 
 mem load -i ./rom.mem /circuit/instr_decoder_label/control_store_label/ram
-mem load -i ./c6.mem /circuit/ram_label/ram
+mem load -i ./c10.mem /circuit/ram_label/ram
 
-property wave -radix unsigned *
+property wave -radix oct *
 add wave -position insertpoint -radix oct sim:/circuit/instr_decoder_label/*
 
 force -freeze sim:/circuit/system_clk 0 0, 1 {50 ps} -r 100

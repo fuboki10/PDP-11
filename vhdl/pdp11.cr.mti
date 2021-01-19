@@ -116,14 +116,6 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Compiling entity circuit
 -- Compiling architecture circuit_arch of circuit
 
-} {} {}} ./alu/my_adder.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/my_adder.vhd
-Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity my_adder
--- Compiling architecture a_my_adder of my_adder
-
 } {} {}} D:/altera_projects/project/bus/decoder.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/altera_projects/project/bus/decoder.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Loading package STANDARD
@@ -133,6 +125,7 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Compiling entity ndecoder
 -- Compiling architecture decoder_arch of ndecoder
 
+<<<<<<< HEAD
 } {} {}} ./bus/register.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/register.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Loading package STANDARD
@@ -140,6 +133,14 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Loading package std_logic_1164
 -- Compiling entity my_nDFF
 -- Compiling architecture reg of my_nDFF
+
+} {} {}} ./alu/my_adder.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/my_adder.vhd
+Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity my_adder
+-- Compiling architecture a_my_adder of my_adder
 
 } {} {}} C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/control_store.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/control_store.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
