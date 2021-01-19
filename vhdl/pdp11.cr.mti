@@ -55,7 +55,20 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Compiling entity control_store
 -- Compiling architecture control_store_arch of control_store
 
-} {} {}} D:/altera_projects/project/bus/ram.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/altera_projects/project/bus/ram.vhd
+} {} {}} ./bus/instruction_decoder.vhd {0 {vcom -work work -2002 -explicit -stats=none C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/instruction_decoder.vhd
+Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity instruction_decoder
+-- Compiling architecture instr_decoder_arch of instruction_decoder
+** Error: C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/instruction_decoder.vhd(99): (vcom-1581) No feasible entries for infix operator 'and'.
+
+** Error: C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/instruction_decoder.vhd(99): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+** Error: C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/instruction_decoder.vhd(131): VHDL Compiler exiting
+
+} {9.0 10.0 11.0 13.0} {}} D:/altera_projects/project/bus/ram.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/altera_projects/project/bus/ram.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -82,15 +95,6 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Compiling architecture syncrama of ram
 
 } {} {}} D:/altera_projects/project/bus/circuit.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/altera_projects/project/bus/circuit.vhd
-Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity circuit
--- Compiling architecture circuit_arch of circuit
-
-} {} {}} ./bus/circuit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/circuit.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Loading package STANDARD
 -- Loading package TEXTIO

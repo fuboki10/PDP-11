@@ -4,12 +4,13 @@ USE IEEE.numeric_std.ALL;
 
 ENTITY circuit IS
 	PORT (
-		rst, clk : IN STD_LOGIC);
+		rst, system_clk : IN STD_LOGIC);
 END circuit;
 ARCHITECTURE circuit_arch OF circuit IS
 
-	SIGNAL pc_out_control, pc_in_control : STD_LOGIC;
-	SIGNAL reg0_out, reg1_out, reg2_out, reg3_out, reg4_out, reg5_out, reg6_out, reg7_out, mdr_out, mar_out, ir_out, temp_out, y_out, z_out, flag_out, ram_out, bus_line, flag_in : STD_LOGIC_VECTOR(15 DOWNTO 0) := (OTHERS => '0');
+	SIGNAL pc_out_control, pc_in_control, clk, halt : STD_LOGIC;
+	SIGNAL reg0_out, reg1_out, reg2_out, reg3_out, reg4_out, reg5_out, reg6_out,
+	reg7_out, mdr_out, mar_out, ir_out, temp_out, y_out, z_out, flag_out, ram_out, bus_line, flag_in, ir_out_address : STD_LOGIC_VECTOR(15 DOWNTO 0);
 	SIGNAL dest_out, src_out, dest_in, src_in, reg_out_control, reg_in_control : STD_LOGIC_VECTOR(7 DOWNTO 0);
 
 	SIGNAL alu_out : STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -73,7 +74,9 @@ ARCHITECTURE circuit_arch OF circuit IS
 			M : INTEGER := 32);
 		PORT (
 			clk, enable, rst : IN STD_LOGIC;
+			halt : OUT STD_LOGIC;
 			ir, flag : IN STD_LOGIC_VECTOR(N - 1 DOWNTO 0);
+			ir_out_address : OUT STD_LOGIC_VECTOR(N - 1 DOWNTO 0);
 			f10 : OUT STD_LOGIC_VECTOR((2 ** 1) - 1 DOWNTO 0);
 			f9 : OUT STD_LOGIC_VECTOR((2 ** 1) - 1 DOWNTO 0);
 			f8 : OUT STD_LOGIC_VECTOR((2 ** 3) - 1 DOWNTO 0);
@@ -97,10 +100,9 @@ ARCHITECTURE circuit_arch OF circuit IS
 	SIGNAL f1 : STD_LOGIC_VECTOR((2 ** 3) - 1 DOWNTO 0);
 	SIGNAL inverted_clk : STD_LOGIC;
 BEGIN
-
+	clk <= system_clk AND (NOT halt);
 	alu_label : alu GENERIC MAP(16) PORT MAP(y_out, bus_line, flag_out, f5, flag_in, alu_out);
-
-	instr_decoder_label : instruction_decoder GENERIC MAP(16, 29) PORT MAP(clk, '1', rst, ir_out, flag_out, f10, f9, f8, f7, f6, f5, f4, f3, f2, f1);
+	instr_decoder_label : instruction_decoder GENERIC MAP(16, 29) PORT MAP(clk, '1', rst, halt, ir_out, flag_out, ir_out_address, f10, f9, f8, f7, f6, f5, f4, f3, f2, f1);
 
 	src_out_label : ndecoder GENERIC MAP(3) PORT MAP(f1(4), ir_out(8 DOWNTO 6), src_out);
 	src_in_label : ndecoder GENERIC MAP(3) PORT MAP(f2(4), ir_out(8 DOWNTO 6), src_in);
@@ -138,6 +140,7 @@ BEGIN
 	tristate5_label : tristate_buffer GENERIC MAP(16) PORT MAP(reg_out_control(5), reg5_out, bus_line);
 	tristate6_label : tristate_buffer GENERIC MAP(16) PORT MAP(reg_out_control(6), reg6_out, bus_line);
 	tristate7_label : tristate_buffer GENERIC MAP(16) PORT MAP(pc_out_control, reg7_out, bus_line);
+	tristate8_label : tristate_buffer GENERIC MAP(16) PORT MAP(f1(7), ir_out_address, bus_line);
 
 	tristate9_label : tristate_buffer GENERIC MAP(16) PORT MAP(f1(2), mdr_out, bus_line);
 	tristate10_label : tristate_buffer GENERIC MAP(16) PORT MAP(f1(6), temp_out, bus_line);

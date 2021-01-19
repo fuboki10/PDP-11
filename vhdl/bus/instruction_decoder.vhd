@@ -8,7 +8,9 @@ ENTITY instruction_decoder IS
     M : INTEGER := 32);
   PORT (
     clk, enable, rst : IN STD_LOGIC;
+    halt : OUT STD_LOGIC;
     ir, flag : IN STD_LOGIC_VECTOR(N - 1 DOWNTO 0);
+    ir_out_address : OUT STD_LOGIC_VECTOR(N - 1 DOWNTO 0);
     f10 : OUT STD_LOGIC_VECTOR((2 ** 1) - 1 DOWNTO 0);
     f9 : OUT STD_LOGIC_VECTOR((2 ** 1) - 1 DOWNTO 0);
     f8 : OUT STD_LOGIC_VECTOR((2 ** 3) - 1 DOWNTO 0);
@@ -73,6 +75,11 @@ BEGIN
     OR (ir(15 DOWNTO 8) = "10000110" AND (flag(0) = '1' OR flag(1) = '1')) ELSE
     '0';
 
+  ir_out_address <= "00000000" & ir(7 DOWNTO 0);
+
+  halt <= '1' WHEN control_word(1) = '1' AND ir = "0000000000000000" ELSE
+    '0';
+
   pla_signal <= "01000001" WHEN double_operand = '1' AND control_word(1) = '1' AND ir(11 DOWNTO 9) = "000" --reg direct
     ELSE
     "01001001" WHEN double_operand = '1' AND control_word(1) = '1' AND ir(11 DOWNTO 9) = "001" --reg indirect
@@ -83,15 +90,17 @@ BEGIN
     ELSE
     "01110001" WHEN double_operand = '1' AND control_word(1) = '1' AND ir(11 DOWNTO 10) = "11" -- indexed
     ELSE
-    "11000001" WHEN single_operand = '1' AND control_word(1) = '1' AND ir(11 DOWNTO 9) = "000" --reg direct
+    "11000001" WHEN single_operand = '1' AND control_word(1) = '1' AND ir(5 DOWNTO 3) = "000" --reg direct
     ELSE
-    "11001001" WHEN single_operand = '1' AND control_word(1) = '1' AND ir(11 DOWNTO 9) = "001" --reg indirect
+    "11001001" WHEN single_operand = '1' AND control_word(1) = '1' AND ir(5 DOWNTO 3) = "001" --reg indirect
     ELSE
-    "11010001" WHEN single_operand = '1' AND control_word(1) = '1' AND ir(11 DOWNTO 10) = "01" --auto increment
+    "11010001" WHEN single_operand = '1' AND control_word(1) = '1' AND ir(5 DOWNTO 4) = "01" --auto increment
     ELSE
-    "11100001" WHEN single_operand = '1' AND control_word(1) = '1' AND ir(11 DOWNTO 10) = "10" -- auto decrement
+    "11100001" WHEN single_operand = '1' AND control_word(1) = '1' AND ir(5 DOWNTO 4) = "10" -- auto decrement
     ELSE
-    "11110001" WHEN single_operand = '1' AND control_word(1) = '1' AND ir(11 DOWNTO 10) = "11" -- indexed
+    "11110001" WHEN single_operand = '1' AND control_word(1) = '1' AND ir(5 DOWNTO 4) = "11" -- indexed
+    ELSE
+    "00001000" WHEN branch = '1' AND control_word(1) = '1' -- branch
     ELSE
     "00000000";
   or_indirect <= "00000001" WHEN ir(9) = '0' AND (control_word(4 DOWNTO 2) = "101" OR control_word(4 DOWNTO 2) = "010")
