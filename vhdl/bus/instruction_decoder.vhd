@@ -39,103 +39,78 @@ ARCHITECTURE instr_decoder_arch OF instruction_decoder IS
       input : IN STD_LOGIC_VECTOR(n - 1 DOWNTO 0);
       output : OUT STD_LOGIC_VECTOR((2 ** n) - 1 DOWNTO 0));
   END COMPONENT;
-  SIGNAL micro_ar : STD_LOGIC_VECTOR(7 DOWNTO 0);
+  COMPONENT my_nDFF IS
+    GENERIC (n : INTEGER := 32);
+    PORT (
+      Clk, Rst, enable : IN STD_LOGIC;
+      d : IN STD_LOGIC_VECTOR(n - 1 DOWNTO 0);
+      q : OUT STD_LOGIC_VECTOR(n - 1 DOWNTO 0));
+  END COMPONENT;
+  SIGNAL micro_ar, pla_signal, control_store_input_address, or_dst, or_1op, or_2op, or_indirect : STD_LOGIC_VECTOR(7 DOWNTO 0);
   SIGNAL control_word : STD_LOGIC_VECTOR(M - 1 DOWNTO 0);
+  SIGNAL single_operand, double_operand, branch, inverted_clk : STD_LOGIC;
   SIGNAL test : STD_LOGIC_VECTOR(7 DOWNTO 0);
   SIGNAL check : STD_LOGIC;
   -- signal f0
 BEGIN
-  PROCESS (clk) IS
-  BEGIN
-    IF rising_edge(clk) AND enable = '1' THEN
-      CASE ir(15 DOWNTO 8) IS
-        WHEN "00000001" =>
-          check <= '1';
-        WHEN "00000010" =>
-          check <= flag(1);
-        WHEN "00000100" =>
-          check <= NOT flag(1);
-        WHEN "10000001" =>
-          check <= NOT flag(0);
-        WHEN "10000010" =>
-          check <= (NOT flag(0)) OR flag(1);
-        WHEN "10000100" =>
-          check <= flag(0);
-        WHEN "10000110" =>
-          check <= flag(0) OR flag(1);
-        WHEN OTHERS => check <= '0';
-      END CASE;
-    END IF;
-  END PROCESS;
 
-  PROCESS (clk) IS
-    VARIABLE micro_ar_var : STD_LOGIC_VECTOR(7 DOWNTO 0);
-  BEGIN
-    IF rst = '1' THEN
-      micro_ar <= (OTHERS => '0');
-    ELSIF rising_edge(clk) AND enable = '1' THEN
-      -- WIDE BRANCHING (only if PLA_out == 1)
-      CASE control_word(1) IS
-        WHEN '1' =>
-          CASE ir(15 DOWNTO 12) IS
-            WHEN "1001" | "1010" | "0001" | "0010" | "0011"
-              | "0100" | "0101" | "0110" | "0111" =>
-              micro_ar_var := "01000001"; -- 101 octal
-              micro_ar_var(5 DOWNTO 4) := ir(11 DOWNTO 10);
-              micro_ar_var(3) := (NOT ir(11)) AND (NOT ir(10)) AND ir(9);
-            WHEN OTHERS =>
-              NULL;
-          END CASE;
+  double_operand <= '1' WHEN ir(15 DOWNTO 12) = "1001" OR ir(15 DOWNTO 12) = "1010" OR ir(15 DOWNTO 12) = "0001"
+    OR ir(15 DOWNTO 12) = "0010" OR ir(15 DOWNTO 12) = "0011" OR ir(15 DOWNTO 12) = "0100" OR ir(15 DOWNTO 12) = "0101"
+    OR ir(15 DOWNTO 12) = "0110" OR ir(15 DOWNTO 12) = "0111" ELSE
+    '0';
 
-          CASE ir(15 DOWNTO 6) IS
-            WHEN
-              "0000101000" | "0000101001" | "0000101010" | "0000101100"
-              | "0000110000" | "0000110010" | "0000110001" | "0000110100" | "0000110110" =>
-              micro_ar_var := "11000001"; -- 301 octal
-              micro_ar_var(5 DOWNTO 4) := ir(5 DOWNTO 4);
-              micro_ar_var(3) := (NOT ir(5)) AND (NOT ir(4)) AND ir(3);
-            WHEN OTHERS =>
-              NULL;
-          END CASE;
+  single_operand <= '1' WHEN ir(15 DOWNTO 6) = "0000101000" OR ir(15 DOWNTO 6) = "0000101001" OR ir(15 DOWNTO 6) = "0000101010"
+    OR ir(15 DOWNTO 6) = "0000101100" OR ir(15 DOWNTO 6) = "0000110000" OR ir(15 DOWNTO 6) = "0000110010"
+    OR ir(15 DOWNTO 6) = "0000110001" OR ir(15 DOWNTO 6) = "0000110100" OR ir(15 DOWNTO 6) = "0000110110" ELSE
+    '0';
 
-          CASE ir(15 DOWNTO 0) IS
-            WHEN "0000000000000000" =>
-              micro_ar_var := "00001011"; -- 013 octal
-            WHEN OTHERS =>
-              NULL;
-          END CASE;
-        WHEN OTHERS =>
-          NULL;
-      END CASE;
+  branch <= '1' WHEN ir(15 DOWNTO 8) = "00000001"
+    OR (ir(15 DOWNTO 8) = "00000010" AND flag(1) = '1')
+    OR (ir(15 DOWNTO 8) = "00000100" AND flag(1) = '0')
+    OR (ir(15 DOWNTO 8) = "10000001" AND flag(0) = '0')
+    OR (ir(15 DOWNTO 8) = "10000010" AND (flag(0) = '0' OR flag(1) = '1'))
+    OR (ir(15 DOWNTO 8) = "10000100" AND flag(0) = '1')
+    OR (ir(15 DOWNTO 8) = "10000110" AND (flag(0) = '1' OR flag(1) = '1')) ELSE
+    '0';
 
-      CASE check IS
-        WHEN '1' =>
-          micro_ar_var := "00001000"; -- 010 octal
-        WHEN '0' =>
-          micro_ar_var := "00000000"; -- 000 octal
-        WHEN OTHERS =>
-          NULL;
-      END CASE;
-      -- BIT ORING
-      CASE control_word(4 DOWNTO 2) IS --F8
-        WHEN "101" | "010" => --ORsin, ORdin
-          micro_ar_var(0) := NOT ir(9);
-        WHEN "001" => --ORdst
-          micro_ar_var(2) := (NOT ir(5)) AND (NOT ir(4)) AND (NOT ir(3));
-        WHEN "011" => --OR1op
-          micro_ar_var(4) := NOT ir(9);
-          micro_ar_var(2 DOWNTO 0) := ir(8 DOWNTO 6);
-        WHEN "100" => --OR2op
-          micro_ar_var(4) := ir(15);
-          micro_ar_var(2 DOWNTO 0) := ir(14 DOWNTO 12);
-        WHEN OTHERS =>
-          NULL;
-      END CASE;
-      micro_ar <= micro_ar_var OR control_word(28 DOWNTO 21);
-    END IF;
-    test <= micro_ar_var;
-  END PROCESS;
-  control_store_label : control_store GENERIC MAP(M, 8) PORT MAP(clk, micro_ar, control_word);
+  pla_signal <= "01000001" WHEN double_operand = '1' AND control_word(1) = '1' AND ir(11 DOWNTO 9) = "000" --reg direct
+    ELSE
+    "01001001" WHEN double_operand = '1' AND control_word(1) = '1' AND ir(11 DOWNTO 9) = "001" --reg indirect
+    ELSE
+    "01010001" WHEN double_operand = '1' AND control_word(1) = '1' AND ir(11 DOWNTO 10) = "01" --auto increment
+    ELSE
+    "01100001" WHEN double_operand = '1' AND control_word(1) = '1' AND ir(11 DOWNTO 10) = "10" -- auto decrement
+    ELSE
+    "01110001" WHEN double_operand = '1' AND control_word(1) = '1' AND ir(11 DOWNTO 10) = "11" -- indexed
+    ELSE
+    "11000001" WHEN single_operand = '1' AND control_word(1) = '1' AND ir(11 DOWNTO 9) = "000" --reg direct
+    ELSE
+    "11001001" WHEN single_operand = '1' AND control_word(1) = '1' AND ir(11 DOWNTO 9) = "001" --reg indirect
+    ELSE
+    "11010001" WHEN single_operand = '1' AND control_word(1) = '1' AND ir(11 DOWNTO 10) = "01" --auto increment
+    ELSE
+    "11100001" WHEN single_operand = '1' AND control_word(1) = '1' AND ir(11 DOWNTO 10) = "10" -- auto decrement
+    ELSE
+    "11110001" WHEN single_operand = '1' AND control_word(1) = '1' AND ir(11 DOWNTO 10) = "11" -- indexed
+    ELSE
+    "00000000";
+  or_indirect <= "00000001" WHEN ir(9) = '0' AND (control_word(4 DOWNTO 2) = "101" OR control_word(4 DOWNTO 2) = "010")
+    ELSE
+    "00000000";
+  or_dst <= "00000100" WHEN ir(5 DOWNTO 3) = "000" AND control_word(4 DOWNTO 2) = "001"
+    ELSE
+    "00000000";
+  or_1op <= "000" & NOT ir(9) & '0' & ir(8 DOWNTO 6) WHEN control_word(4 DOWNTO 2) = "011"
+    ELSE
+    "00000000";
+  or_2op <= "0000" & ir(15 DOWNTO 12) WHEN control_word(4 DOWNTO 2) = "100"
+    ELSE
+    "00000000";
+  micro_ar <= or_indirect OR or_dst OR or_1op OR or_2op OR pla_signal OR control_word(28 DOWNTO 21);
+
+  inverted_clk <= NOT clk;
+  micro_register : my_nDFF GENERIC MAP(8) PORT MAP(clk, rst, '1', micro_ar, control_store_input_address);
+  control_store_label : control_store GENERIC MAP(M, 8) PORT MAP(clk, control_store_input_address, control_word);
   f10_label : ndecoder GENERIC MAP(1) PORT MAP('1', control_word(0 DOWNTO 0), f10);
   f9_label : ndecoder GENERIC MAP(1) PORT MAP('1', control_word(1 DOWNTO 1), f9);
   f8_label : ndecoder GENERIC MAP(3) PORT MAP('1', control_word(4 DOWNTO 2), f8);

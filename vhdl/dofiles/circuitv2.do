@@ -40,13 +40,14 @@ sim:/circuit/f4 \
 sim:/circuit/f3 \
 sim:/circuit/f2 \
 sim:/circuit/f1 
-add wave -position insertpoint sim:/circuit/instr_decoder_label/*
 
 mem load -i ./rom.mem /circuit/instr_decoder_label/control_store_label/ram
-mem load -i ./c8.mem /circuit/ram_label/ram
+mem load -i ./c6.mem /circuit/ram_label/ram
 
-property wave -radix hex *
-force -freeze sim:/circuit/clk 1 0, 0 {50 ps} -r 100
+property wave -radix unsigned *
+add wave -position insertpoint -radix oct sim:/circuit/instr_decoder_label/*
+
+force -freeze sim:/circuit/clk 0 0, 1 {50 ps} -r 100
 
 force -freeze sim:/circuit/rst 1 0
 run
