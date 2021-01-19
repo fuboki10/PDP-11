@@ -9,33 +9,33 @@ z2
 cModel Technology
 dD:/altera_projects/Req2
 Ealu
-Z0 w1610919304
+Z0 w1610922437
 Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z3 dC:/Users/STEINER/Desktop/PDP-11/vhdl
-Z4 8C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/ALU.vhd
-Z5 FC:/Users/STEINER/Desktop/PDP-11/vhdl/alu/ALU.vhd
+Z3 dD:/Projects/C++/PDP-11/vhdl
+Z4 8D:/Projects/C++/PDP-11/vhdl/alu/ALU.vhd
+Z5 FD:/Projects/C++/PDP-11/vhdl/alu/ALU.vhd
 l0
 L6
-Vg:TeS2zfAoH9z<QXz2PbG3
+VaJfKXNKbR4:_8KK8=M@dz1
 !s100 EgMeQN`?^dUn8W?5Q6CNf3
-Z6 OV;C;10.4d;61
+Z6 OV;C;10.5b;63
 32
-Z7 !s110 1611025761
+Z7 !s110 1611034463
 !i10b 1
-Z8 !s108 1611025761.000000
-Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/ALU.vhd|
-Z10 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/ALU.vhd|
+Z8 !s108 1611034463.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Projects/C++/PDP-11/vhdl/alu/ALU.vhd|
+Z10 !s107 D:/Projects/C++/PDP-11/vhdl/alu/ALU.vhd|
 !i113 1
 Z11 o-work work -2002 -explicit
-Z12 tExplicit 1
+Z12 tExplicit 1 CvgOpt 0
 Aalumodel
 R1
 R2
-DEx4 work 3 alu 0 22 g:TeS2zfAoH9z<QXz2PbG3
+DEx4 work 3 alu 0 22 aJfKXNKbR4:_8KK8=M@dz1
 l62
 L15
-Vm:moRQ4X1LK=`mbmeg6W]0
+VzYoM9eE0iGQ1]^mT_ko2=0
 !s100 Waa2hl>`f2mOn`VEa>3El3
 R6
 32
@@ -48,24 +48,24 @@ R10
 R11
 R12
 Ecircuit
-Z13 w1611028911
+Z13 w1611030234
 Z14 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R1
 R2
 R3
-Z15 8C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/circuit.vhd
-Z16 FC:/Users/STEINER/Desktop/PDP-11/vhdl/bus/circuit.vhd
+Z15 8D:/Projects/C++/PDP-11/vhdl/bus/circuit.vhd
+Z16 FD:/Projects/C++/PDP-11/vhdl/bus/circuit.vhd
 l0
 L5
-V`b^4G=Y`iHSG2>c8WQ9G?0
+Vj<bMb2@hR_b0WFG[XG6R<2
 !s100 n]a<GL[gR6[ifhGB;YTlL3
 R6
 32
-Z17 !s110 1611028920
+R7
 !i10b 1
-Z18 !s108 1611028920.000000
-Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/circuit.vhd|
-Z20 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/circuit.vhd|
+R8
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Projects/C++/PDP-11/vhdl/bus/circuit.vhd|
+Z18 !s107 D:/Projects/C++/PDP-11/vhdl/bus/circuit.vhd|
 !i113 1
 R11
 R12
@@ -73,40 +73,40 @@ Acircuit_arch
 R14
 R1
 R2
-Z21 DEx4 work 7 circuit 0 22 `b^4G=Y`iHSG2>c8WQ9G?0
+DEx4 work 7 circuit 0 22 j<bMb2@hR_b0WFG[XG6R<2
 l99
 L9
-VH[3f_8SDPn4>Ya2Q=WHi@3
+VhOjCNSeA5XI4P;Y`fHb4B0
 !s100 TYMOVLoBQFAdN1O=ZX9?N3
 R6
 32
-R17
+R7
 !i10b 1
+R8
+R17
 R18
-R19
-R20
 !i113 1
 R11
 R12
 Econtrol_store
-Z22 w1610937728
+Z19 w1610990762
 R14
 R1
 R2
 R3
-Z23 8C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/control_store.vhd
-Z24 FC:/Users/STEINER/Desktop/PDP-11/vhdl/bus/control_store.vhd
+Z20 8D:/Projects/C++/PDP-11/vhdl/bus/control_store.vhd
+Z21 FD:/Projects/C++/PDP-11/vhdl/bus/control_store.vhd
 l0
 L5
-V8S?bIh3MmN2[aeUG8jMH11
+VMfNXeCI67AYf5d8;W_VNj2
 !s100 D?f9KHnEoh<]NC8e@z[?Q3
 R6
 32
-Z25 !s110 1611025763
+Z22 !s110 1611034464
 !i10b 1
-Z26 !s108 1611025763.000000
-Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/control_store.vhd|
-Z28 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/control_store.vhd|
+Z23 !s108 1611034464.000000
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Projects/C++/PDP-11/vhdl/bus/control_store.vhd|
+Z25 !s107 D:/Projects/C++/PDP-11/vhdl/bus/control_store.vhd|
 !i113 1
 R11
 R12
@@ -114,40 +114,40 @@ Acontrol_store_arch
 R14
 R1
 R2
-DEx4 work 13 control_store 0 22 8S?bIh3MmN2[aeUG8jMH11
+DEx4 work 13 control_store 0 22 MfNXeCI67AYf5d8;W_VNj2
 l20
 L15
-VFCdREiLDe9I_8fEaBJ2RP3
+V3VLOM?]C:B`a@LW?^V<Zc1
 !s100 2DSYf_7bI7Ge_QTSUUf;h1
 R6
 32
-R25
+R22
 !i10b 1
-R26
-R27
-R28
+R23
+R24
+R25
 !i113 1
 R11
 R12
 Einstruction_decoder
-Z29 w1611026092
+Z26 w1611034456
 R14
 R1
 R2
 R3
-Z30 8C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/instruction_decoder.vhd
-Z31 FC:/Users/STEINER/Desktop/PDP-11/vhdl/bus/instruction_decoder.vhd
+Z27 8D:/Projects/C++/PDP-11/vhdl/bus/instruction_decoder.vhd
+Z28 FD:/Projects/C++/PDP-11/vhdl/bus/instruction_decoder.vhd
 l0
 L5
-VDDUI0z6jSk?lAaWnJXUDR3
+V8m<gB<?`Zl<ZS=lMMB6Y70
 !s100 8hBZ7C[TT=E48>L]8O9lK1
 R6
 32
-Z32 !s110 1611026182
+R22
 !i10b 1
-Z33 !s108 1611026182.000000
-Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/instruction_decoder.vhd|
-Z35 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/instruction_decoder.vhd|
+R23
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Projects/C++/PDP-11/vhdl/bus/instruction_decoder.vhd|
+Z30 !s107 D:/Projects/C++/PDP-11/vhdl/bus/instruction_decoder.vhd|
 !i113 1
 R11
 R12
@@ -155,157 +155,157 @@ Ainstr_decoder_arch
 R14
 R1
 R2
-DEx4 work 19 instruction_decoder 0 22 DDUI0z6jSk?lAaWnJXUDR3
+DEx4 work 19 instruction_decoder 0 22 8m<gB<?`Zl<ZS=lMMB6Y70
 l55
 L24
-Vl`@nAdLV=JB<Q9NX_KYMi3
-!s100 =YeifG]^CF@VN6;<PoZH02
+V_2WcLcCnYE6;;k]bf?9z02
+!s100 aj03JV6a[5Hd^gNF0ezFD1
 R6
 32
-R32
+R22
 !i10b 1
-R33
-R34
-R35
+R23
+R29
+R30
 !i113 1
 R11
 R12
 Emdr_register
-Z36 w1611028336
+R13
 R1
 R2
 R3
-Z37 8C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/mdr_register.vhd
-Z38 FC:/Users/STEINER/Desktop/PDP-11/vhdl/bus/mdr_register.vhd
+Z31 8D:/Projects/C++/PDP-11/vhdl/bus/mdr_register.vhd
+Z32 FD:/Projects/C++/PDP-11/vhdl/bus/mdr_register.vhd
 l0
 L4
-VQIW3XCmQ]XYd`OH_2YRdK0
+V_KX3=6gY@BDFN0zIj6C7g3
 !s100 U:dBliL6MzVZO:aO?^kJU3
 R6
 32
-Z39 !s110 1611028504
+R22
 !i10b 1
-Z40 !s108 1611028504.000000
-Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/mdr_register.vhd|
-Z42 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/mdr_register.vhd|
+R23
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Projects/C++/PDP-11/vhdl/bus/mdr_register.vhd|
+Z34 !s107 D:/Projects/C++/PDP-11/vhdl/bus/mdr_register.vhd|
 !i113 1
 R11
 R12
 Areg
 R1
 R2
-DEx4 work 12 mdr_register 0 22 QIW3XCmQ]XYd`OH_2YRdK0
+Z35 DEx4 work 12 mdr_register 0 22 _KX3=6gY@BDFN0zIj6C7g3
 l12
 L11
-VZiLFC?ame?AL11n[^7hbG0
-!s100 ;RTbhC;LM8SZ6L=Fn:kWe2
+Z36 VBH=3ANd[nm]3W[`ZN2^RH3
+Z37 !s100 ;RTbhC;LM8SZ6L=Fn:kWe2
 R6
 32
-R39
+R22
 !i10b 1
-R40
-R41
-R42
+R23
+R33
+R34
 !i113 1
 R11
 R12
 Emy_adder
-Z43 w1603806524
+R0
 R1
 R2
 R3
-Z44 8C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/my_adder.vhd
-Z45 FC:/Users/STEINER/Desktop/PDP-11/vhdl/alu/my_adder.vhd
+Z38 8D:/Projects/C++/PDP-11/vhdl/alu/my_adder.vhd
+Z39 FD:/Projects/C++/PDP-11/vhdl/alu/my_adder.vhd
 l0
 L4
-V>KIFVIfaa3nb>;X<leAFS2
+VFjlMaf=9aFlNWPMnMXH?k3
 !s100 A5lJZfMh@V_I]hj`4ZSML1
 R6
 32
-Z46 !s110 1611025760
+R7
 !i10b 1
-Z47 !s108 1611025760.000000
-Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/my_adder.vhd|
-Z49 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/my_adder.vhd|
+R8
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Projects/C++/PDP-11/vhdl/alu/my_adder.vhd|
+Z41 !s107 D:/Projects/C++/PDP-11/vhdl/alu/my_adder.vhd|
 !i113 1
 R11
 R12
 Aa_my_adder
 R1
 R2
-DEx4 work 8 my_adder 0 22 >KIFVIfaa3nb>;X<leAFS2
+DEx4 work 8 my_adder 0 22 FjlMaf=9aFlNWPMnMXH?k3
 l10
 L9
-V=;CFci:66?]^9i=MQ2z981
+VEOP9;;8K^;kWb:D@aED0N1
 !s100 GNi^[i0bJH4Ed:4A3E4hd2
 R6
 32
-R46
+R7
 !i10b 1
-R47
-R48
-R49
+R8
+R40
+R41
 !i113 1
 R11
 R12
 Emy_ndff
-Z50 w1610990210
+Z42 w1610922438
 R1
 R2
 R3
-Z51 8C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/register.vhd
-Z52 FC:/Users/STEINER/Desktop/PDP-11/vhdl/bus/register.vhd
+Z43 8D:/Projects/C++/PDP-11/vhdl/bus/register.vhd
+Z44 FD:/Projects/C++/PDP-11/vhdl/bus/register.vhd
 l0
 L4
-V4md0i_CIILl9`D;7A9NUg1
+V_XAk67QaAPGaM@n^mAfY12
 !s100 2=YQZiR3gmdCe;1=ZKz1K3
 R6
 32
-Z53 !s110 1611025762
+R22
 !i10b 1
-Z54 !s108 1611025762.000000
-Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/register.vhd|
-Z56 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/register.vhd|
+R23
+Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Projects/C++/PDP-11/vhdl/bus/register.vhd|
+Z46 !s107 D:/Projects/C++/PDP-11/vhdl/bus/register.vhd|
 !i113 1
 R11
 R12
 Areg
 R1
 R2
-DEx4 work 7 my_ndff 0 22 4md0i_CIILl9`D;7A9NUg1
+DEx4 work 7 my_ndff 0 22 _XAk67QaAPGaM@n^mAfY12
 l11
 L10
-VX2:^jUVAQ1UTMni[i^_283
+VD<A[_NG8G@7I5n1o7=fhz1
 !s100 Db`K9AnGB4ZQj:NQMOQ]I0
 R6
 32
-R53
+R22
 !i10b 1
-R54
-R55
-R56
+R23
+R45
+R46
 !i113 1
 R11
 R12
 Endecoder
-Z57 w1605380611
+R42
 R14
 R1
 R2
 R3
-Z58 8C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/decoder.vhd
-Z59 FC:/Users/STEINER/Desktop/PDP-11/vhdl/bus/decoder.vhd
+Z47 8D:/Projects/C++/PDP-11/vhdl/bus/decoder.vhd
+Z48 FD:/Projects/C++/PDP-11/vhdl/bus/decoder.vhd
 l0
 L5
-VVl88z_[?_RGc`cCJ0S7]h2
+V^91UhGWbC];d13UU1DakF1
 !s100 <a>KP`WodOG:ZU4cIDnCS1
 R6
 32
-R53
+R22
 !i10b 1
 R8
-Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/decoder.vhd|
-Z61 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/decoder.vhd|
+Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Projects/C++/PDP-11/vhdl/bus/decoder.vhd|
+Z50 !s107 D:/Projects/C++/PDP-11/vhdl/bus/decoder.vhd|
 !i113 1
 R11
 R12
@@ -313,40 +313,40 @@ Adecoder_arch
 R14
 R1
 R2
-DEx4 work 8 ndecoder 0 22 Vl88z_[?_RGc`cCJ0S7]h2
+DEx4 work 8 ndecoder 0 22 ^91UhGWbC];d13UU1DakF1
 l12
 L11
-VU^Wlo4DZPkXzho7C>SXAf3
+Vkl8PPZBlRT9m0X3f`;TH<1
 !s100 jR[4fm?e<3lzA7@8z>EMO0
 R6
 32
-R53
+R22
 !i10b 1
 R8
-R60
-R61
+R49
+R50
 !i113 1
 R11
 R12
 Eparta
-Z62 w1610736145
+R0
 R14
 R1
 R2
 R3
-Z63 8C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partA.vhd
-Z64 FC:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partA.vhd
+Z51 8D:/Projects/C++/PDP-11/vhdl/alu/partA.vhd
+Z52 FD:/Projects/C++/PDP-11/vhdl/alu/partA.vhd
 l0
 L5
-VgNfie2;o]A4HEgzBBbS;V0
+Vne9OIBH89N;Y6VCEQI_8U2
 !s100 gGKgn_ZcTERC?A>MkD8>C0
 R6
 32
-R46
+R7
 !i10b 1
-R47
-Z65 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partA.vhd|
-Z66 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partA.vhd|
+R8
+Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Projects/C++/PDP-11/vhdl/alu/partA.vhd|
+Z54 !s107 D:/Projects/C++/PDP-11/vhdl/alu/partA.vhd|
 !i113 1
 R11
 R12
@@ -354,157 +354,157 @@ Amodela
 R14
 R1
 R2
-DEx4 work 5 parta 0 22 gNfie2;o]A4HEgzBBbS;V0
+DEx4 work 5 parta 0 22 ne9OIBH89N;Y6VCEQI_8U2
 l25
 L16
-V9B:7Y0N1>czmodHbS5loi0
+VgFYUFO<GFomXcMK1b_lR93
 !s100 S;_?PF?5VI3W4CEoc3EbL2
 R6
 32
-R46
+R7
 !i10b 1
-R47
-R65
-R66
+R8
+R53
+R54
 !i113 1
 R11
 R12
 Epartb
-Z67 w1610732249
+R42
 R1
 R2
 R3
-Z68 8C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partB.vhd
-Z69 FC:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partB.vhd
+Z55 8D:/Projects/C++/PDP-11/vhdl/alu/partB.vhd
+Z56 FD:/Projects/C++/PDP-11/vhdl/alu/partB.vhd
 l0
 L4
-V:Id54jcL7jS_2>_FQTiWm0
+V=jY;M1WnZPCZMWlcE5lgK2
 !s100 Z>oJDS[IH23>m@RZ<61Nl2
 R6
 32
-R46
+R7
 !i10b 1
-R47
-Z70 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partB.vhd|
-Z71 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partB.vhd|
+R8
+Z57 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Projects/C++/PDP-11/vhdl/alu/partB.vhd|
+Z58 !s107 D:/Projects/C++/PDP-11/vhdl/alu/partB.vhd|
 !i113 1
 R11
 R12
 Amodelb
 R1
 R2
-DEx4 work 5 partb 0 22 :Id54jcL7jS_2>_FQTiWm0
+DEx4 work 5 partb 0 22 =jY;M1WnZPCZMWlcE5lgK2
 l24
 L15
-VKG=V[eVO>5k<=3Q1Pi1U`3
+VZ8TIijLCR7M]hbGj5R?f]3
 !s100 HgFdN61DGT1IOd`ik_R^B2
 R6
 32
-R46
+R7
 !i10b 1
-R47
-R70
-R71
+R8
+R57
+R58
 !i113 1
 R11
 R12
 Epartc
-Z72 w1610731946
+R42
 R1
 R2
 R3
-Z73 8C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partC.vhd
-Z74 FC:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partC.vhd
+Z59 8D:/Projects/C++/PDP-11/vhdl/alu/partC.vhd
+Z60 FD:/Projects/C++/PDP-11/vhdl/alu/partC.vhd
 l0
 L4
-VFkcnm3nbPN5:gF@3<CH281
+Vmd6kHMd[7kCoN`X4K>ek@3
 !s100 okaLDF4DG4]]=AB1F81?`2
 R6
 32
-R46
+R7
 !i10b 1
-R47
-Z75 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partC.vhd|
-Z76 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partC.vhd|
+R8
+Z61 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Projects/C++/PDP-11/vhdl/alu/partC.vhd|
+Z62 !s107 D:/Projects/C++/PDP-11/vhdl/alu/partC.vhd|
 !i113 1
 R11
 R12
 Amodelc
 R1
 R2
-DEx4 work 5 partc 0 22 Fkcnm3nbPN5:gF@3<CH281
+DEx4 work 5 partc 0 22 md6kHMd[7kCoN`X4K>ek@3
 l16
 L15
-Vo6QPJZ3ONH3VmR=UCf[Ga2
+VlXO>k7;n[fPL158NPHBaM3
 !s100 Mgc0JH0?W1d]Y<LlUI=ld0
 R6
 32
-R46
+R7
 !i10b 1
-R47
-R75
-R76
+R8
+R61
+R62
 !i113 1
 R11
 R12
 Epartd
-Z77 w1610736143
+R42
 R1
 R2
 R3
-Z78 8C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partD.vhd
-Z79 FC:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partD.vhd
+Z63 8D:/Projects/C++/PDP-11/vhdl/alu/partD.vhd
+Z64 FD:/Projects/C++/PDP-11/vhdl/alu/partD.vhd
 l0
 L4
-V3m9NOVdoCBWRM4C_<<9zn0
+V2jahjje3T9YIm3ZTIBcK>3
 !s100 QEcW`Za3:lL2XYkC1>igD2
 R6
 32
 R7
 !i10b 1
 R8
-Z80 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partD.vhd|
-Z81 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/alu/partD.vhd|
+Z65 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Projects/C++/PDP-11/vhdl/alu/partD.vhd|
+Z66 !s107 D:/Projects/C++/PDP-11/vhdl/alu/partD.vhd|
 !i113 1
 R11
 R12
 Amodeld
 R1
 R2
-DEx4 work 5 partd 0 22 3m9NOVdoCBWRM4C_<<9zn0
+DEx4 work 5 partd 0 22 2jahjje3T9YIm3ZTIBcK>3
 l16
 L15
-V=UMWO3oem0Rec<zi_;8UD2
+VQab=MTjkSDKe^h_O6X`z:2
 !s100 <jG2B;UB1mZg1z<TeangF1
 R6
 32
 R7
 !i10b 1
 R8
-R80
-R81
+R65
+R66
 !i113 1
 R11
 R12
 Eram
-Z82 w1605472783
+R42
 R14
 R1
 R2
 R3
-Z83 8C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/ram.vhd
-Z84 FC:/Users/STEINER/Desktop/PDP-11/vhdl/bus/ram.vhd
+Z67 8D:/Projects/C++/PDP-11/vhdl/bus/ram.vhd
+Z68 FD:/Projects/C++/PDP-11/vhdl/bus/ram.vhd
 l0
 L5
-V=b:<2_FQG2VEmNX95G?B]3
+V55fRaf5>@P;=kRfYMXATT0
 !s100 Y8PX`EGHVLaEdlZPFQ8A[1
 R6
 32
-R53
+R22
 !i10b 1
-R54
-Z85 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/ram.vhd|
-Z86 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/ram.vhd|
+R23
+Z69 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Projects/C++/PDP-11/vhdl/bus/ram.vhd|
+Z70 !s107 D:/Projects/C++/PDP-11/vhdl/bus/ram.vhd|
 !i113 1
 R11
 R12
@@ -512,57 +512,57 @@ Asyncrama
 R14
 R1
 R2
-DEx4 work 3 ram 0 22 =b:<2_FQG2VEmNX95G?B]3
+DEx4 work 3 ram 0 22 55fRaf5>@P;=kRfYMXATT0
 l21
 L16
-VVN]cKCDQ[J7jNllPLTimO3
+V^jk:4:H5IG:fAAebPZ8ei2
 !s100 ?<l?W^m@2[ghS^SiPf4J[0
 R6
 32
-R53
+R22
 !i10b 1
-R54
-R85
-R86
+R23
+R69
+R70
 !i113 1
 R11
 R12
 Etristate_buffer
-Z87 w1605452622
+R42
 R1
 R2
 R3
-Z88 8C:/Users/STEINER/Desktop/PDP-11/vhdl/work/tristate.vhd
-Z89 FC:/Users/STEINER/Desktop/PDP-11/vhdl/work/tristate.vhd
+Z71 8D:/Projects/C++/PDP-11/vhdl/work/tristate.vhd
+Z72 FD:/Projects/C++/PDP-11/vhdl/work/tristate.vhd
 l0
 L4
-VA3oR=fG^4d:9zbg[Q<W>L1
+VWCX2g@`T`B:QdWO=LS=8X2
 !s100 QNdO79H@_^f1a0FVQkl^61
 R6
 32
-R53
+R22
 !i10b 1
-R54
-Z90 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/STEINER/Desktop/PDP-11/vhdl/work/tristate.vhd|
-Z91 !s107 C:/Users/STEINER/Desktop/PDP-11/vhdl/work/tristate.vhd|
+R23
+Z73 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Projects/C++/PDP-11/vhdl/work/tristate.vhd|
+Z74 !s107 D:/Projects/C++/PDP-11/vhdl/work/tristate.vhd|
 !i113 1
 R11
 R12
 Atristate_arch
 R1
 R2
-DEx4 work 15 tristate_buffer 0 22 A3oR=fG^4d:9zbg[Q<W>L1
+DEx4 work 15 tristate_buffer 0 22 WCX2g@`T`B:QdWO=LS=8X2
 l11
 L10
-V6=A?_=IHBE7J`i5kgZi8i1
+VM?^CDik[c8Of7n3>b6b;n1
 !s100 b`=k>CVCnTVVIPQVEl@h[3
 R6
 32
-R53
+R22
 !i10b 1
-R54
-R90
-R91
+R23
+R73
+R74
 !i113 1
 R11
 R12

@@ -1,10 +1,10 @@
 // memory data file (do not edit the following line - required for mem load use)
 // instance=/circuit/ram_label/ram
 // format=mti addressradix=d dataradix=b version=1.0 wordsperline=1
-   0: 1001010111000001
-   1: 0000000000000100
-   2: 1001100001000000
-   3: 0000000000000101
+   0: 1001100001000000
+   1: 0000000000000011
+   2: 0000000000000000
+   3: 0000000000000000
    4: 0000000000000000
    5: 0000000000000000
    6: 0000000000000000
