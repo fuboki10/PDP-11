@@ -1,18 +1,795 @@
 # Reading C:/altera/16.0/modelsim_ase/tcl/vsim/pref.tcl
 # OpenFile C:/Users/STEINER/Desktop/PDP-11/vhdl/pdp11.mpf
 # Loading project pdp11
-# Compile of my_adder.vhd was successful.
-# Compile of partA.vhd was successful.
-# Compile of partB.vhd was successful.
-# Compile of partC.vhd was successful.
-# Compile of partD.vhd was successful.
-# Compile of ALU.vhd was successful.
-# Compile of circuit.vhd was successful.
-# Compile of decoder.vhd was successful.
-# Compile of ram.vhd was successful.
-# Compile of register.vhd was successful.
-# Compile of tristate.vhd was successful.
+do dofiles/circuitv2.do
+# vsim -gui work.circuit 
+# Start time: 16:56:39 on Jan 19,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.circuit(circuit_arch)
+# Loading work.alu(alumodel)
+# Loading work.parta(modela)
+# Loading work.my_adder(a_my_adder)
+# Loading work.partb(modelb)
+# Loading work.partc(modelc)
+# Loading work.partd(modeld)
+# Loading work.instruction_decoder(instr_decoder_arch)
+# Loading work.my_ndff(reg)
+# Loading work.control_store(control_store_arch)
+# Loading work.ndecoder(decoder_arch)
+# Loading work.mdr_register(reg)
+# Loading work.ram(syncrama)
+# Loading work.tristate_buffer(tristate_arch)
+# ** Warning: (vsim-8684) No drivers exist on out port /circuit/alu_label/flagout(15 downto 3), and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /circuit/flag_in(15 downto 3).
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: Abdelrahman Tarek  Hostname: DESKTOP-EO3R338  ProcessID: 12068
+# 
+#           Attempting to use alternate WLF file "./wlftvqx16j".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftvqx16j
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/ram_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/dest_in_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/dest_out_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/src_in_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/src_out_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f1_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f2_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f3_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f4_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f6_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f7_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f8_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f9_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f10_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/control_store_label
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+do dofiles/circuitv2.do
+# End time: 17:02:13 on Jan 19,2021, Elapsed time: 0:05:34
+# Errors: 0, Warnings: 18
+# vsim -gui work.circuit 
+# Start time: 17:02:13 on Jan 19,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.circuit(circuit_arch)
+# Loading work.alu(alumodel)
+# Loading work.parta(modela)
+# Loading work.my_adder(a_my_adder)
+# Loading work.partb(modelb)
+# Loading work.partc(modelc)
+# Loading work.partd(modeld)
+# Loading work.instruction_decoder(instr_decoder_arch)
+# Loading work.my_ndff(reg)
+# Loading work.control_store(control_store_arch)
+# Loading work.ndecoder(decoder_arch)
+# Loading work.mdr_register(reg)
+# Loading work.ram(syncrama)
+# Loading work.tristate_buffer(tristate_arch)
+# ** Warning: (vsim-8684) No drivers exist on out port /circuit/alu_label/flagout(15 downto 3), and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /circuit/flag_in(15 downto 3).
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: Abdelrahman Tarek  Hostname: DESKTOP-EO3R338  ProcessID: 12068
+# 
+#           Attempting to use alternate WLF file "./wlftky1hfh".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftky1hfh
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/ram_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/dest_in_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/dest_out_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/src_in_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/src_out_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f1_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f2_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f3_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f4_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f6_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f7_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f8_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f9_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f10_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/control_store_label
 # Compile of instruction_decoder.vhd was successful.
-# Compile of control_store.vhd was successful.
-# Compile of mdr_register.vhd was successful.
-# 14 compiles, 0 failed with no errors.
+do dofiles/circuitv2.do
+# End time: 17:02:37 on Jan 19,2021, Elapsed time: 0:00:24
+# Errors: 0, Warnings: 18
+# vsim -gui work.circuit 
+# Start time: 17:02:37 on Jan 19,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.circuit(circuit_arch)
+# Loading work.alu(alumodel)
+# Loading work.parta(modela)
+# Loading work.my_adder(a_my_adder)
+# Loading work.partb(modelb)
+# Loading work.partc(modelc)
+# Loading work.partd(modeld)
+# Loading work.instruction_decoder(instr_decoder_arch)
+# Loading work.my_ndff(reg)
+# Loading work.control_store(control_store_arch)
+# Loading work.ndecoder(decoder_arch)
+# Loading work.mdr_register(reg)
+# Loading work.ram(syncrama)
+# Loading work.tristate_buffer(tristate_arch)
+# ** Warning: (vsim-8684) No drivers exist on out port /circuit/alu_label/flagout(15 downto 3), and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /circuit/flag_in(15 downto 3).
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: Abdelrahman Tarek  Hostname: DESKTOP-EO3R338  ProcessID: 12068
+# 
+#           Attempting to use alternate WLF file "./wlftd6aqxn".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftd6aqxn
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/ram_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/dest_in_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/dest_out_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/src_in_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/src_out_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f1_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f2_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f3_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f4_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f6_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f7_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f8_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f9_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f10_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/control_store_label
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+do dofiles/circuitv2.do
+# End time: 17:16:01 on Jan 19,2021, Elapsed time: 0:13:24
+# Errors: 0, Warnings: 18
+# vsim -gui work.circuit 
+# Start time: 17:16:01 on Jan 19,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.circuit(circuit_arch)
+# Loading work.alu(alumodel)
+# Loading work.parta(modela)
+# Loading work.my_adder(a_my_adder)
+# Loading work.partb(modelb)
+# Loading work.partc(modelc)
+# Loading work.partd(modeld)
+# Loading work.instruction_decoder(instr_decoder_arch)
+# Loading work.my_ndff(reg)
+# Loading work.control_store(control_store_arch)
+# Loading work.ndecoder(decoder_arch)
+# Loading work.mdr_register(reg)
+# Loading work.ram(syncrama)
+# Loading work.tristate_buffer(tristate_arch)
+# ** Warning: (vsim-8684) No drivers exist on out port /circuit/alu_label/flagout(15 downto 3), and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /circuit/flag_in(15 downto 3).
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: Abdelrahman Tarek  Hostname: DESKTOP-EO3R338  ProcessID: 12068
+# 
+#           Attempting to use alternate WLF file "./wlftxsxfb3".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftxsxfb3
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/ram_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/dest_in_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/dest_out_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/src_in_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/src_out_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f1_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f2_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f3_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f4_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f6_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f7_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f8_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f9_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f10_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/control_store_label
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of instruction_decoder.vhd was successful.
+do dofiles/circuitv2.do
+# End time: 17:24:51 on Jan 19,2021, Elapsed time: 0:08:50
+# Errors: 0, Warnings: 18
+# vsim -gui work.circuit 
+# Start time: 17:24:51 on Jan 19,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.circuit(circuit_arch)
+# Loading work.alu(alumodel)
+# Loading work.parta(modela)
+# Loading work.my_adder(a_my_adder)
+# Loading work.partb(modelb)
+# Loading work.partc(modelc)
+# Loading work.partd(modeld)
+# Loading work.instruction_decoder(instr_decoder_arch)
+# Loading work.my_ndff(reg)
+# Loading work.control_store(control_store_arch)
+# Loading work.ndecoder(decoder_arch)
+# Loading work.mdr_register(reg)
+# Loading work.ram(syncrama)
+# Loading work.tristate_buffer(tristate_arch)
+# ** Warning: (vsim-8684) No drivers exist on out port /circuit/alu_label/flagout(15 downto 3), and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /circuit/flag_in(15 downto 3).
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: Abdelrahman Tarek  Hostname: DESKTOP-EO3R338  ProcessID: 12068
+# 
+#           Attempting to use alternate WLF file "./wlftqzkavg".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftqzkavg
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/ram_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/dest_in_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/dest_out_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/src_in_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/src_out_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f1_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f2_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f3_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f4_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f6_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f7_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f8_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f9_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f10_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/control_store_label
+run -continue
+run -all
+# Compile of instruction_decoder.vhd was successful.
+do dofiles/circuitv2.do
+# End time: 17:27:51 on Jan 19,2021, Elapsed time: 0:03:00
+# Errors: 0, Warnings: 18
+# vsim -gui work.circuit 
+# Start time: 17:27:51 on Jan 19,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.circuit(circuit_arch)
+# Loading work.alu(alumodel)
+# Loading work.parta(modela)
+# Loading work.my_adder(a_my_adder)
+# Loading work.partb(modelb)
+# Loading work.partc(modelc)
+# Loading work.partd(modeld)
+# Loading work.instruction_decoder(instr_decoder_arch)
+# Loading work.my_ndff(reg)
+# Loading work.control_store(control_store_arch)
+# Loading work.ndecoder(decoder_arch)
+# Loading work.mdr_register(reg)
+# Loading work.ram(syncrama)
+# Loading work.tristate_buffer(tristate_arch)
+# ** Warning: (vsim-8684) No drivers exist on out port /circuit/alu_label/flagout(15 downto 3), and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /circuit/flag_in(15 downto 3).
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: Abdelrahman Tarek  Hostname: DESKTOP-EO3R338  ProcessID: 12068
+# 
+#           Attempting to use alternate WLF file "./wlftnkwa7q".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftnkwa7q
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/ram_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/dest_in_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/dest_out_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/src_in_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/src_out_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f1_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f2_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f3_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f4_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f6_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f7_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f8_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f9_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f10_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/control_store_label
+# Break key hit
+run
+run -continue
+run -all
+do dofiles/circuitv2.do
+# End time: 17:30:18 on Jan 19,2021, Elapsed time: 0:02:27
+# Errors: 0, Warnings: 18
+# vsim -gui work.circuit 
+# Start time: 17:30:18 on Jan 19,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.circuit(circuit_arch)
+# Loading work.alu(alumodel)
+# Loading work.parta(modela)
+# Loading work.my_adder(a_my_adder)
+# Loading work.partb(modelb)
+# Loading work.partc(modelc)
+# Loading work.partd(modeld)
+# Loading work.instruction_decoder(instr_decoder_arch)
+# Loading work.my_ndff(reg)
+# Loading work.control_store(control_store_arch)
+# Loading work.ndecoder(decoder_arch)
+# Loading work.mdr_register(reg)
+# Loading work.ram(syncrama)
+# Loading work.tristate_buffer(tristate_arch)
+# ** Warning: (vsim-8684) No drivers exist on out port /circuit/alu_label/flagout(15 downto 3), and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /circuit/flag_in(15 downto 3).
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: Abdelrahman Tarek  Hostname: DESKTOP-EO3R338  ProcessID: 12068
+# 
+#           Attempting to use alternate WLF file "./wlftx6g4vx".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftx6g4vx
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/ram_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/dest_in_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/dest_out_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/src_in_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/src_out_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f1_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f2_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f3_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f4_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f6_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f7_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f8_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f9_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f10_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/control_store_label
+# Compile of instruction_decoder.vhd was successful.
+do dofiles/circuitv2.do
+# End time: 17:30:32 on Jan 19,2021, Elapsed time: 0:00:14
+# Errors: 0, Warnings: 18
+# vsim -gui work.circuit 
+# Start time: 17:30:32 on Jan 19,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.circuit(circuit_arch)
+# Loading work.alu(alumodel)
+# Loading work.parta(modela)
+# Loading work.my_adder(a_my_adder)
+# Loading work.partb(modelb)
+# Loading work.partc(modelc)
+# Loading work.partd(modeld)
+# Loading work.instruction_decoder(instr_decoder_arch)
+# Loading work.my_ndff(reg)
+# Loading work.control_store(control_store_arch)
+# Loading work.ndecoder(decoder_arch)
+# Loading work.mdr_register(reg)
+# Loading work.ram(syncrama)
+# Loading work.tristate_buffer(tristate_arch)
+# ** Warning: (vsim-8684) No drivers exist on out port /circuit/alu_label/flagout(15 downto 3), and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /circuit/flag_in(15 downto 3).
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: Abdelrahman Tarek  Hostname: DESKTOP-EO3R338  ProcessID: 12068
+# 
+#           Attempting to use alternate WLF file "./wlft58qie4".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlft58qie4
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/ram_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/dest_in_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/dest_out_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/src_in_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/src_out_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f1_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f2_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f3_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f4_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f6_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f7_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f8_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f9_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/f10_label
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /circuit/instr_decoder_label/control_store_label
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 17:57:22 on Jan 19,2021, Elapsed time: 0:26:50
+# Errors: 0, Warnings: 18

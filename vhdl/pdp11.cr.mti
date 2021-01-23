@@ -55,14 +55,6 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Compiling entity control_store
 -- Compiling architecture control_store_arch of control_store
 
-} {} {}} ./bus/mdr_register.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/mdr_register.vhd
-Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity mdr_register
--- Compiling architecture reg of mdr_register
-
 } {} {}} ./bus/instruction_decoder.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/instruction_decoder.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Loading package STANDARD
@@ -71,6 +63,14 @@ Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
 -- Loading package NUMERIC_STD
 -- Compiling entity instruction_decoder
 -- Compiling architecture instr_decoder_arch of instruction_decoder
+
+} {} {}} ./bus/mdr_register.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/STEINER/Desktop/PDP-11/vhdl/bus/mdr_register.vhd
+Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mdr_register
+-- Compiling architecture reg of mdr_register
 
 } {} {}} D:/altera_projects/project/bus/ram.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/altera_projects/project/bus/ram.vhd
 Model Technology ModelSim ALTERA vcom 10.4d Compiler 2015.12 Dec 30 2015

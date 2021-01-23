@@ -75,7 +75,8 @@ BEGIN
     OR (ir(15 DOWNTO 8) = "10000110" AND (flag(0) = '1' OR flag(1) = '1')) ELSE
     '0';
 
-  ir_out_address <= "00000000" & ir(7 DOWNTO 0);
+
+  ir_out_address <= ir(7) & ir(7) & ir(7) & ir(7) & ir(7) & ir(7) & ir(7) & ir(7) & ir(7 DOWNTO 0);
 
   halt <= '1' WHEN control_word(1) = '1' AND ir = "0000000000000000" ELSE
     '0';
