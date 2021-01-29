@@ -2,10 +2,11 @@
 PDP11-based microprocessor with its assembler.
 
 # Design
+<p align="center">
+  <img src="assets/schema.png" alt="Schema" width=50% heright=50%>
 
-<img src="assets/schema.png" alt="Schema" width=50% heright=50%>
-
-<img src="assets/opcode.png" alt="OpCode" width=50% heright=50%>
+  <img src="assets/opcode.png" alt="OpCode" width=50% heright=50%>
+</p>
 
 ## Addressing modes
 
